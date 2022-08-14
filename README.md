@@ -1,4 +1,4 @@
-### Hi there 👋
+### Hi there 👋, my name is Allan Kariuki
 
 - 🔭 I’m currently working on Machine Learning Algorithms
 - 🌱 I’m currently learning everything
