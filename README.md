@@ -12,7 +12,7 @@
 ###
  Skills: Python, Javascript, PHP, css, Django, C++, C
 ### My Github stats
-
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=AllanKariuki&theme=dark&show_icons=true)
 ### Languages stats
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=AllanKariuki&theme=dark&show_icons=true)](https://github.com/anuraghazra/github-readme-stats)
 
