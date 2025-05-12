@@ -7,7 +7,7 @@
 ### My interests
 
 - I am into everything Tech.
-- I love learning new things, especially something that will revolutionise the tech industry.
+- I love learning new things, especially something that will revolutionize the tech industry.
 - Solving problems using any and every tool within my reach
 ###
  Skills: Python, Javascript, PHP, css, Django, C++, C
