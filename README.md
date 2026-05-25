@@ -1,20 +1,216 @@
-### Hi there 👋, my name is Allan Kariuki
+<div align="center">
 
-- 🔭 I’m currently working on Machine Learning Algorithms
-- 🌱 I’m currently learning everything
-- 👯 I’m looking to collaborate on any interesting project
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:00ff41&height=220&section=header&text=Allan%20Kariuki&fontSize=72&fontColor=00ff41&animation=fadeIn&fontAlignY=38&desc=Software%20Developer%20%7C%20ML%20Engineer%20%7C%20Problem%20Solver&descAlignY=60&descSize=18&descColor=ffffff" alt="banner"/>
 
-### My interests
+<a href="https://github.com/AllanKariuki">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3200&pause=700&color=00FF41&center=true&vCenter=true&width=720&lines=%24+sudo+access+granted...;%24+whoami;%3E+Software+Developer.;%3E+Machine+Learning+Engineer.;%3E+Problem+Solver+from+Nairobi%2C+Kenya;%24+./build_the_future.sh+--verbose" alt="typing" />
+</a>
 
-- I am into everything Tech.
-- I love learning new things, especially something that will revolutionize the tech industry.
-- Solving problems using any and every tool within my reach
-###
- Skills: Python, Javascript, PHP, css, Django, C++, C
-### My Github stats
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=AllanKariuki&theme=dark&show_icons=true)
-### Languages stats
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=AllanKariuki&theme=dark&show_icons=true)](https://github.com/anuraghazra/github-readme-stats)
+<p>
+  <img src="https://komarev.com/ghpvc/?username=AllanKariuki&label=PROFILE+VIEWS&color=00ff41&style=for-the-badge" alt="profile views"/>
+  <img src="https://img.shields.io/github/followers/AllanKariuki?logo=github&style=for-the-badge&color=00ff41&labelColor=0d1117&label=FOLLOWERS" alt="followers"/>
+  <img src="https://img.shields.io/badge/STATUS-ONLINE-00ff41?style=for-the-badge&labelColor=0d1117" alt="status"/>
+</p>
 
-[![willianrod's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=willianrod)](https://github.com/anuraghazra/github-readme-stats)
+</div>
 
+---
+
+## ` ~ ` `>` `cat ./about.md`
+
+```js
+const allan = {
+    name:        "Allan Kariuki",
+    location:    "Nairobi, Kenya 🇰🇪",
+    role:        "Software Developer & ML Engineer",
+    currently:   ["Machine Learning Algorithms", "Intelligent Parking Assistant"],
+    learning:    "Everything that revolutionizes tech",
+    interests:   ["AI/ML", "Computer Vision", "Backend Systems", "Problem-solving"],
+    collaborate: "Open to any interesting project — let's build something!",
+    motto:       "Solving problems with every tool within reach.",
+};
+```
+
+---
+
+## ` ~ ` `>` `ls ./tech_stack/`
+
+<div align="center">
+
+#### `> languages/`
+
+![Python](https://img.shields.io/badge/-Python-0d1117?style=for-the-badge&logo=python&logoColor=00ff41&labelColor=0d1117)
+![JavaScript](https://img.shields.io/badge/-JavaScript-0d1117?style=for-the-badge&logo=javascript&logoColor=00ff41&labelColor=0d1117)
+![PHP](https://img.shields.io/badge/-PHP-0d1117?style=for-the-badge&logo=php&logoColor=00ff41&labelColor=0d1117)
+![C++](https://img.shields.io/badge/-C++-0d1117?style=for-the-badge&logo=cplusplus&logoColor=00ff41&labelColor=0d1117)
+![C](https://img.shields.io/badge/-C-0d1117?style=for-the-badge&logo=c&logoColor=00ff41&labelColor=0d1117)
+![HTML5](https://img.shields.io/badge/-HTML5-0d1117?style=for-the-badge&logo=html5&logoColor=00ff41&labelColor=0d1117)
+![CSS3](https://img.shields.io/badge/-CSS3-0d1117?style=for-the-badge&logo=css3&logoColor=00ff41&labelColor=0d1117)
+
+#### `> frameworks_and_tools/`
+
+![Django](https://img.shields.io/badge/-Django-0d1117?style=for-the-badge&logo=django&logoColor=00ff41&labelColor=0d1117)
+![React](https://img.shields.io/badge/-React-0d1117?style=for-the-badge&logo=react&logoColor=00ff41&labelColor=0d1117)
+![Node.js](https://img.shields.io/badge/-Node.js-0d1117?style=for-the-badge&logo=node.js&logoColor=00ff41&labelColor=0d1117)
+![Express](https://img.shields.io/badge/-Express-0d1117?style=for-the-badge&logo=express&logoColor=00ff41&labelColor=0d1117)
+![Celery](https://img.shields.io/badge/-Celery-0d1117?style=for-the-badge&logo=celery&logoColor=00ff41&labelColor=0d1117)
+![MongoDB](https://img.shields.io/badge/-MongoDB-0d1117?style=for-the-badge&logo=mongodb&logoColor=00ff41&labelColor=0d1117)
+![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-0d1117?style=for-the-badge&logo=postgresql&logoColor=00ff41&labelColor=0d1117)
+![Docker](https://img.shields.io/badge/-Docker-0d1117?style=for-the-badge&logo=docker&logoColor=00ff41&labelColor=0d1117)
+![Git](https://img.shields.io/badge/-Git-0d1117?style=for-the-badge&logo=git&logoColor=00ff41&labelColor=0d1117)
+![Linux](https://img.shields.io/badge/-Linux-0d1117?style=for-the-badge&logo=linux&logoColor=00ff41&labelColor=0d1117)
+
+</div>
+
+---
+
+## ` ~ ` `>` `git log --pinned`
+
+> **`[FLAGSHIP]`** Currently shipping intelligent systems and full-stack platforms.
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### 🅽 [Intelligent Parking Assistant](https://github.com/Intelligent-Parking-Assistant/backend)
+```yaml
+status:   active
+type:     ML / Computer Vision
+stack:    Python · Django · ML Models
+about:    Smart parking system that
+          detects, allocates and manages
+          parking using vision + ML.
+```
+
+</td>
+<td width="50%" valign="top">
+
+#### 🅽 [ZenWash Backend](https://github.com/AllanKariuki/zenwashBackend)
+```yaml
+status:   active
+type:     Service Platform API
+stack:    Python · Django · REST
+about:    Backend for an on-demand
+          car-wash booking and
+          dispatch platform.
+```
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+#### 🅽 [MERN Express](https://github.com/AllanKariuki/mern-express)
+```yaml
+status:   active
+type:     Full-stack web
+stack:    MongoDB · Express · React · Node
+about:    Practicing modern full-stack
+          MERN architecture and
+          REST API patterns.
+```
+
+</td>
+<td width="50%" valign="top">
+
+#### 🅽 [Django × Celery](https://github.com/AllanKariuki/django-celery-trial1)
+```yaml
+status:   experimental
+type:     Async task processing
+stack:    Django · Celery · Redis
+about:    Background tasks, scheduled
+          jobs, and message-queue
+          patterns with Celery.
+```
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+#### 🅽 [Hotel Administration System](https://github.com/AllanKariuki/HotelAdministrationSysem)
+```yaml
+status:   shipped
+type:     Management dashboard
+stack:    Python · Django · CSS
+about:    End-to-end admin platform for
+          rooms, bookings, billing and
+          staff operations.
+```
+
+</td>
+<td width="50%" valign="top">
+
+#### 🅽 [Coffee Shop](https://github.com/AllanKariuki/CoffeeShop)
+```yaml
+status:   shipped
+type:     Frontend / UI build
+stack:    HTML · CSS · JS
+about:    Themed coffee-shop site —
+          layout, animations and
+          responsive design practice.
+```
+
+</td>
+</tr>
+</table>
+
+<div align="center">
+  
+  `> 72 public repositories · pinned 6 above · explore more →` **[github.com/AllanKariuki?tab=repositories](https://github.com/AllanKariuki?tab=repositories)**
+  
+</div>
+
+---
+
+## ` ~ ` `>` `./stats.sh --live`
+
+<div align="center">
+
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=AllanKariuki&show_icons=true&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&title_color=00ff41&icon_color=00ff41&text_color=ffffff&include_all_commits=true&count_private=true" />
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AllanKariuki&layout=compact&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&title_color=00ff41&text_color=ffffff&langs_count=8" />
+
+<br/>
+
+<img src="https://github-readme-streak-stats.herokuapp.com?user=AllanKariuki&theme=dark&hide_border=true&background=0d1117&stroke=00ff41&ring=00ff41&fire=00ff41&currStreakLabel=00ff41" alt="streak" />
+
+<br/><br/>
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=AllanKariuki&bg_color=0d1117&color=00ff41&line=00ff41&point=ffffff&area=true&hide_border=true" alt="activity graph" />
+
+<br/><br/>
+
+<img src="https://github-profile-trophy.vercel.app/?username=AllanKariuki&theme=matrix&no-frame=true&no-bg=true&column=7&margin-w=10" alt="trophies" />
+
+</div>
+
+---
+
+## ` ~ ` `>` `./connect.sh --establish`
+
+<div align="center">
+
+<a href="https://www.linkedin.com/in/allan-kariuki-70bbb7186/">
+  <img src="https://img.shields.io/badge/LinkedIn-Allan%20Kariuki-0d1117?style=for-the-badge&logo=linkedin&logoColor=00ff41&labelColor=0d1117" />
+</a>
+<a href="mailto:allankariuki96@gmail.com">
+  <img src="https://img.shields.io/badge/Email-allankariuki96@gmail.com-0d1117?style=for-the-badge&logo=gmail&logoColor=00ff41&labelColor=0d1117" />
+</a>
+<a href="https://github.com/AllanKariuki">
+  <img src="https://img.shields.io/badge/GitHub-@AllanKariuki-0d1117?style=for-the-badge&logo=github&logoColor=00ff41&labelColor=0d1117" />
+</a>
+
+</div>
+
+---
+
+<div align="center">
+
+```bash
+$ echo "Thanks for stopping by — let's build something that matters."
+> Connection closed. EOF.
+```
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00ff41,100:0d1117&height=100&section=footer" alt="footer"/>
+
+</div>
