@@ -100,27 +100,24 @@ about:    Backend for an on-demand
 <tr>
 <td width="50%" valign="top">
 
-#### 🅽 [MERN Express](https://github.com/AllanKariuki/mern-express)
+#### 🅽 [Air drums](https://github.com/AllanKariuki/air-drums)
 ```yaml
 status:   active
-type:     Full-stack web
-stack:    MongoDB · Express · React · Node
-about:    Practicing modern full-stack
-          MERN architecture and
-          REST API patterns.
+type:     Computer Vision
+stack:    Python · Mediapipe3 · Computer vision
+about:    This is an application that simulates playing drums
+          by tracking your hand movements and using stored sounds.
 ```
 
 </td>
 <td width="50%" valign="top">
 
-#### 🅽 [Django × Celery](https://github.com/AllanKariuki/django-celery-trial1)
+#### 🅽 [E-shop backend](https://github.com/AllanKariuki/e-commerce-backend)
 ```yaml
-status:   experimental
-type:     Async task processing
-stack:    Django · Celery · Redis
-about:    Background tasks, scheduled
-          jobs, and message-queue
-          patterns with Celery.
+status:   active
+type:     Backend
+stack:    Django · Celery · Redis · Postgres vector · REPLICATE
+about:    This backend stores mappings of products that can be used in searches to retrieve them. It also interfaces with an ML model to aid in rendering images of what the product would look like in use.
 ```
 
 </td>
@@ -128,30 +125,16 @@ about:    Background tasks, scheduled
 <tr>
 <td width="50%" valign="top">
 
-#### 🅽 [Hotel Administration System](https://github.com/AllanKariuki/HotelAdministrationSysem)
+#### 🅽 [E-shop frontend](https://github.com/AllanKariuki/e-commerce-frontend)
 ```yaml
-status:   shipped
-type:     Management dashboard
-stack:    Python · Django · CSS
-about:    End-to-end admin platform for
-          rooms, bookings, billing and
-          staff operations.
+status:   active
+type:     Frontend
+stack:    React · Typescript · TailwindCSS
+about:    Customer-facing frontend for hair and other products to try out.
 ```
 
 </td>
-<td width="50%" valign="top">
 
-#### 🅽 [Coffee Shop](https://github.com/AllanKariuki/CoffeeShop)
-```yaml
-status:   shipped
-type:     Frontend / UI build
-stack:    HTML · CSS · JS
-about:    Themed coffee-shop site —
-          layout, animations and
-          responsive design practice.
-```
-
-</td>
 </tr>
 </table>
 
