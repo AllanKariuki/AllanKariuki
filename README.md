@@ -105,8 +105,9 @@ about:    Backend for an on-demand
 status:   active
 type:     Computer Vision
 stack:    Python · Mediapipe3 · Computer vision
-about:    This is an application that simulates playing drums
-          by tracking your hand movements and using stored sounds.
+about:    This is an application that simulates
+          playing drums by tracking your
+          hand movements and using stored sounds.
 ```
 
 </td>
@@ -133,7 +134,8 @@ about:    This backend stores mappings of products that
 status:   active
 type:     Frontend
 stack:    React · Typescript · TailwindCSS
-about:    Customer-facing frontend for hair and other products to try out.
+about:    Customer-facing frontend for
+          hair and other products to try out.
 ```
 
 </td>
