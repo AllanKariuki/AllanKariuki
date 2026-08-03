@@ -117,7 +117,10 @@ about:    This is an application that simulates playing drums
 status:   active
 type:     Backend
 stack:    Django · Celery · Redis · Postgres vector · REPLICATE
-about:    This backend stores mappings of products that can be used in searches to retrieve them. It also interfaces with an ML model to aid in rendering images of what the product would look like in use.
+about:    This backend stores mappings of products that
+          can be used in searches to retrieve them.
+          It also interfaces with an ML model to help render
+          images of how the product would look in use.
 ```
 
 </td>
