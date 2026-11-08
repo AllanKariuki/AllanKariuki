@@ -46,7 +46,7 @@ const allan = {
 ![C](https://img.shields.io/badge/-C-0d1117?style=for-the-badge&logo=c&logoColor=00ff41&labelColor=0d1117)
 ![HTML5](https://img.shields.io/badge/-HTML5-0d1117?style=for-the-badge&logo=html5&logoColor=00ff41&labelColor=0d1117)
 ![CSS3](https://img.shields.io/badge/-CSS3-0d1117?style=for-the-badge&logo=css3&logoColor=00ff41&labelColor=0d1117)
-![Java](https://img.shields.io/badge/-Java-0d1117?style=for-the-badge&logo=java&logoColor=00ff41&labelColor=0d1117)
+![Java](https://img.shields.io/badge/-JAVA-0d1117?style=for-the-badge&logo=java&logoColor=00ff41&labelColor=0d1117)
 
 #### `> frameworks_and_tools/`
 
