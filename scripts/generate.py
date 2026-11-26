@@ -544,8 +544,7 @@ def render_stats(d):
     parts = [
         f'<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" '
         'xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GitHub stats">',
-        f'<rect width="{width}" height="{height}" rx="12" fill="{BG}" '
-        'stroke="#30363d" stroke-width="1"/>',
+        _bg(width, height),
         f'<text x="24" y="38" font-family="{FONT}" font-size="18" font-weight="700" '
         f'fill="{ACCENT}">{esc("Allan's GitHub Stats")}</text>',
     ]
@@ -561,12 +560,12 @@ def render_stats(d):
             f'fill="#c9d1d9">{esc(label)}</text>'
         )
         parts.append(
-            f'<text x="330" y="{y}" text-anchor="end" font-family="{FONT}" '
+            f'<text x="210" y="{y}" font-family="{FONT}" '
             f'font-size="12.5" font-weight="700" fill="{TEXT}">{esc(value)}</text>'
         )
         y += 15.5
     # Activity grade ring
-    cx, cy, r = 420, 105, 40
+    cx, cy, r = 360, 105, 40
     circ = 2 * math.pi * r
     dash = circ * (d["grade_score"] / 100.0)
     parts.append(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="#30363d" stroke-width="6"/>')
@@ -595,8 +594,7 @@ def render_langs(d):
     parts = [
         f'<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" '
         'xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Top languages">',
-        f'<rect width="{width}" height="{height}" rx="12" fill="{BG}" '
-        'stroke="#30363d" stroke-width="1"/>',
+        _bg(width, height),
         f'<text x="24" y="38" font-family="{FONT}" font-size="18" font-weight="700" '
         f'fill="{ACCENT}">Top Languages</text>',
     ]
@@ -615,22 +613,18 @@ def render_langs(d):
                 f'fill="{esc(lang["color"])}"/>'
             )
             x += seg_w
-        col_x = [24, 265]
+        col_x = [24, 240]
         for idx, lang in enumerate(langs):
             cx = col_x[idx % 2]
             cy = 90 + (idx // 2) * 22
             pct = lang["size"] / total * 100.0
             parts.append(
-                f'<rect x="{cx}" y="{cy - 9}" width="10" height="10" rx="2" '
-                f'fill="{esc(lang["color"])}"/>'
+                f'<circle cx="{cx + 5}" cy="{cy - 4}" r="5" fill="{esc(lang["color"])}"/>'
             )
             parts.append(
                 f'<text x="{cx + 16}" y="{cy}" font-family="{FONT}" font-size="12" '
-                f'fill="{TEXT}">{esc(lang["name"])}</text>'
-            )
-            parts.append(
-                f'<text x="{cx + 206}" y="{cy}" text-anchor="end" font-family="{FONT}" '
-                f'font-size="12" fill="{MUTED}">{pct:.1f}%</text>'
+                f'fill="{TEXT}">{esc(lang["name"])} '
+                f'<tspan fill="{MUTED}">{pct:.2f}%</tspan></text>'
             )
     parts.append("</svg>")
     return "\n".join(parts)
