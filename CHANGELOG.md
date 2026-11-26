@@ -9,9 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - `scripts/generate.py`: a stdlib-only Python generator that renders every profile SVG (stats, top languages, streak, activity graph, header, typing and footer) from the GitHub GraphQL API.
-- `.github/workflows/profile-assets.yml`: a GitHub Action that regenerates and commits `assets/*.svg` on a daily schedule, manual dispatch, or pushes to `scripts/**` / the workflow file.
+- `.github/workflows/profile-assets.yml`: a GitHub Action that regenerates and commits `assets/*.svg` every 6 hours, on manual dispatch, or pushes to `scripts/**` / the workflow file.
 - `assets/*.svg` (generated output): self-hosted replacements for the previously external stats, streak, activity, banner and typing widgets.
-- Month drill-down: an expandable "Zoom into a month" section with a daily contribution chart per month (`assets/months/01–12.svg`), regenerated daily.
+- Month drill-down: an expandable "Zoom into a month" section with a daily contribution chart per month (`assets/months/01–12.svg`), regenerated every 6 hours.
 - `CHANGELOG.md`.
 
 ### Changed
