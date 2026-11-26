@@ -1,15 +1,13 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:00ff41&height=220&section=header&text=Allan%20Kariuki&fontSize=72&fontColor=00ff41&animation=fadeIn&fontAlignY=38&desc=Software%20Developer%20%7C%20ML%20Engineer%20%7C%20Problem%20Solver&descAlignY=60&descSize=18&descColor=ffffff" alt="banner"/>
+<img src="./assets/header.svg" alt="banner"/>
 
-<a href="https://github.com/AllanKariuki">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3200&pause=700&color=00FF41&center=true&vCenter=true&width=720&lines=%24+sudo+access+granted...;%24+whoami;%3E+Software+Developer.;%3E+Machine+Learning+Engineer.;%3E+Problem+Solver+from+Nairobi%2C+Kenya;%24+./build_the_future.sh+--verbose" alt="typing" />
-</a>
+<img src="./assets/typing.svg" alt="typing" />
 
 <p>
-  <img src="https://komarev.com/ghpvc/?username=AllanKariuki&label=PROFILE+VIEWS&color=00ff41&style=for-the-badge" alt="profile views"/>
-  <img src="https://img.shields.io/github/followers/AllanKariuki?logo=github&style=for-the-badge&color=00ff41&labelColor=0d1117&label=FOLLOWERS" alt="followers"/>
-  <img src="https://img.shields.io/badge/STATUS-ONLINE-00ff41?style=for-the-badge&labelColor=0d1117" alt="status"/>
+  <img src="https://komarev.com/ghpvc/?username=AllanKariuki&label=PROFILE+VIEWS&color=58a6ff&style=for-the-badge" alt="profile views"/>
+  <img src="https://img.shields.io/github/followers/AllanKariuki?logo=github&style=for-the-badge&color=58a6ff&labelColor=0d1117&label=FOLLOWERS" alt="followers"/>
+  <img src="https://img.shields.io/badge/STATUS-ONLINE-58a6ff?style=for-the-badge&labelColor=0d1117" alt="status"/>
 </p>
 
 </div>
@@ -22,10 +20,10 @@
 const allan = {
     name:        "Allan Kariuki",
     location:    "Nairobi, Kenya 🇰🇪",
-    role:        "Software Developer & ML Engineer",
-    currently:   ["Machine Learning Algorithms", "Intelligent Parking Assistant"],
-    learning:    "Everything that revolutionizes tech",
-    interests:   ["AI/ML", "Computer Vision", "Backend Systems", "Problem-solving"],
+    role:        "Software Engineer — ML, Backend & Web3",
+    currently:   ["DawaTrace", "USD-X stablecoin bridge", "English⇄Kiswahili translator"],
+    learning:    "Neural networks from scratch (micrograd → makemore)",
+    interests:   ["Applied ML / Computer Vision", "Fintech & payments infrastructure", "Blockchain", "Mobile"],
     collaborate: "Open to any interesting project — let's build something!",
     motto:       "Solving problems with every tool within reach.",
 };
@@ -39,27 +37,43 @@ const allan = {
 
 #### `> languages/`
 
-![Python](https://img.shields.io/badge/-Python-0d1117?style=for-the-badge&logo=python&logoColor=00ff41&labelColor=0d1117)
-![JavaScript](https://img.shields.io/badge/-JavaScript-0d1117?style=for-the-badge&logo=javascript&logoColor=00ff41&labelColor=0d1117)
-![PHP](https://img.shields.io/badge/-PHP-0d1117?style=for-the-badge&logo=php&logoColor=00ff41&labelColor=0d1117)
-![C++](https://img.shields.io/badge/-C++-0d1117?style=for-the-badge&logo=cplusplus&logoColor=00ff41&labelColor=0d1117)
-![C](https://img.shields.io/badge/-C-0d1117?style=for-the-badge&logo=c&logoColor=00ff41&labelColor=0d1117)
-![HTML5](https://img.shields.io/badge/-HTML5-0d1117?style=for-the-badge&logo=html5&logoColor=00ff41&labelColor=0d1117)
-![CSS3](https://img.shields.io/badge/-CSS3-0d1117?style=for-the-badge&logo=css3&logoColor=00ff41&labelColor=0d1117)
-![Java](https://img.shields.io/badge/-JAVA-0d1117?style=for-the-badge&logo=java&logoColor=00ff41&labelColor=0d1117)
+![Python](https://img.shields.io/badge/-Python-0d1117?style=for-the-badge&logo=python&logoColor=58a6ff&labelColor=0d1117)
+![JavaScript](https://img.shields.io/badge/-JavaScript-0d1117?style=for-the-badge&logo=javascript&logoColor=58a6ff&labelColor=0d1117)
+![PHP](https://img.shields.io/badge/-PHP-0d1117?style=for-the-badge&logo=php&logoColor=58a6ff&labelColor=0d1117)
+![C++](https://img.shields.io/badge/-C++-0d1117?style=for-the-badge&logo=cplusplus&logoColor=58a6ff&labelColor=0d1117)
+![C](https://img.shields.io/badge/-C-0d1117?style=for-the-badge&logo=c&logoColor=58a6ff&labelColor=0d1117)
+![HTML5](https://img.shields.io/badge/-HTML5-0d1117?style=for-the-badge&logo=html5&logoColor=58a6ff&labelColor=0d1117)
+![CSS3](https://img.shields.io/badge/-CSS3-0d1117?style=for-the-badge&logo=css3&logoColor=58a6ff&labelColor=0d1117)
+![Java](https://img.shields.io/badge/-JAVA-0d1117?style=for-the-badge&logo=java&logoColor=58a6ff&labelColor=0d1117)
+![Go](https://img.shields.io/badge/-Go-0d1117?style=for-the-badge&logo=go&logoColor=58a6ff&labelColor=0d1117)
+![TypeScript](https://img.shields.io/badge/-TypeScript-0d1117?style=for-the-badge&logo=typescript&logoColor=58a6ff&labelColor=0d1117)
+![Kotlin](https://img.shields.io/badge/-Kotlin-0d1117?style=for-the-badge&logo=kotlin&logoColor=58a6ff&labelColor=0d1117)
+![Dart](https://img.shields.io/badge/-Dart-0d1117?style=for-the-badge&logo=dart&logoColor=58a6ff&labelColor=0d1117)
+![Rust](https://img.shields.io/badge/-Rust-0d1117?style=for-the-badge&logo=rust&logoColor=58a6ff&labelColor=0d1117)
+![Solidity](https://img.shields.io/badge/-Solidity-0d1117?style=for-the-badge&logo=solidity&logoColor=58a6ff&labelColor=0d1117)
 
 #### `> frameworks_and_tools/`
 
-![Django](https://img.shields.io/badge/-Django-0d1117?style=for-the-badge&logo=django&logoColor=00ff41&labelColor=0d1117)
-![React](https://img.shields.io/badge/-React-0d1117?style=for-the-badge&logo=react&logoColor=00ff41&labelColor=0d1117)
-![Node.js](https://img.shields.io/badge/-Node.js-0d1117?style=for-the-badge&logo=node.js&logoColor=00ff41&labelColor=0d1117)
-![Express](https://img.shields.io/badge/-Express-0d1117?style=for-the-badge&logo=express&logoColor=00ff41&labelColor=0d1117)
-![Celery](https://img.shields.io/badge/-Celery-0d1117?style=for-the-badge&logo=celery&logoColor=00ff41&labelColor=0d1117)
-![MongoDB](https://img.shields.io/badge/-MongoDB-0d1117?style=for-the-badge&logo=mongodb&logoColor=00ff41&labelColor=0d1117)
-![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-0d1117?style=for-the-badge&logo=postgresql&logoColor=00ff41&labelColor=0d1117)
-![Docker](https://img.shields.io/badge/-Docker-0d1117?style=for-the-badge&logo=docker&logoColor=00ff41&labelColor=0d1117)
-![Git](https://img.shields.io/badge/-Git-0d1117?style=for-the-badge&logo=git&logoColor=00ff41&labelColor=0d1117)
-![Linux](https://img.shields.io/badge/-Linux-0d1117?style=for-the-badge&logo=linux&logoColor=00ff41&labelColor=0d1117)
+![Django](https://img.shields.io/badge/-Django-0d1117?style=for-the-badge&logo=django&logoColor=58a6ff&labelColor=0d1117)
+![React](https://img.shields.io/badge/-React-0d1117?style=for-the-badge&logo=react&logoColor=58a6ff&labelColor=0d1117)
+![Node.js](https://img.shields.io/badge/-Node.js-0d1117?style=for-the-badge&logo=node.js&logoColor=58a6ff&labelColor=0d1117)
+![Express](https://img.shields.io/badge/-Express-0d1117?style=for-the-badge&logo=express&logoColor=58a6ff&labelColor=0d1117)
+![Celery](https://img.shields.io/badge/-Celery-0d1117?style=for-the-badge&logo=celery&logoColor=58a6ff&labelColor=0d1117)
+![MongoDB](https://img.shields.io/badge/-MongoDB-0d1117?style=for-the-badge&logo=mongodb&logoColor=58a6ff&labelColor=0d1117)
+![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-0d1117?style=for-the-badge&logo=postgresql&logoColor=58a6ff&labelColor=0d1117)
+![Docker](https://img.shields.io/badge/-Docker-0d1117?style=for-the-badge&logo=docker&logoColor=58a6ff&labelColor=0d1117)
+![Git](https://img.shields.io/badge/-Git-0d1117?style=for-the-badge&logo=git&logoColor=58a6ff&labelColor=0d1117)
+![Linux](https://img.shields.io/badge/-Linux-0d1117?style=for-the-badge&logo=linux&logoColor=58a6ff&labelColor=0d1117)
+![FastAPI](https://img.shields.io/badge/-FastAPI-0d1117?style=for-the-badge&logo=fastapi&logoColor=58a6ff&labelColor=0d1117)
+![PyTorch](https://img.shields.io/badge/-PyTorch-0d1117?style=for-the-badge&logo=pytorch&logoColor=58a6ff&labelColor=0d1117)
+![Hugging Face](https://img.shields.io/badge/-Hugging%20Face-0d1117?style=for-the-badge&logo=huggingface&logoColor=58a6ff&labelColor=0d1117)
+![Flutter](https://img.shields.io/badge/-Flutter-0d1117?style=for-the-badge&logo=flutter&logoColor=58a6ff&labelColor=0d1117)
+![Jetpack Compose](https://img.shields.io/badge/-Jetpack%20Compose-0d1117?style=for-the-badge&logo=jetpackcompose&logoColor=58a6ff&labelColor=0d1117)
+![Next.js](https://img.shields.io/badge/-Next.js-0d1117?style=for-the-badge&logo=nextdotjs&logoColor=58a6ff&labelColor=0d1117)
+![Foundry](https://img.shields.io/badge/-Foundry-0d1117?style=for-the-badge&logoColor=58a6ff&labelColor=0d1117)
+![Redis](https://img.shields.io/badge/-Redis-0d1117?style=for-the-badge&logo=redis&logoColor=58a6ff&labelColor=0d1117)
+![Keycloak](https://img.shields.io/badge/-Keycloak-0d1117?style=for-the-badge&logo=keycloak&logoColor=58a6ff&labelColor=0d1117)
+![Kubernetes](https://img.shields.io/badge/-Kubernetes-0d1117?style=for-the-badge&logo=kubernetes&logoColor=58a6ff&labelColor=0d1117)
 
 </div>
 
@@ -73,14 +87,42 @@ const allan = {
 <tr>
 <td width="50%" valign="top">
 
+#### 🅽 [DawaTrace](https://github.com/AllanKariuki/dawatrace)
+```yaml
+status:   active
+type:     HealthTech · Computer Vision
+stack:    Go · Python · PyTorch · Kotlin · PostGIS
+about:    On-device CV + GS1/EPCIS track-and-trace
+          against counterfeit medicines in
+          Kenya / East Africa.
+```
+
+</td>
+<td width="50%" valign="top">
+
+#### 🅽 [Language Translator](https://github.com/AllanKariuki/language-translator)
+```yaml
+status:   active
+type:     AI / ML
+stack:    NLLB-200 · FastAPI · Gradio · CTranslate2
+about:    English⇄Kiswahili translation via a
+          fine-tuned NLLB-200 model — REPL,
+          Gradio demo and FastAPI service.
+```
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
 #### 🅽 [Intelligent Parking Assistant](https://github.com/Intelligent-Parking-Assistant/backend)
 ```yaml
 status:   active
 type:     ML / Computer Vision
 stack:    Python · Django · ML Models
-about:    Smart parking system that
-          detects, allocates and manages
-          parking using vision + ML.
+about:    Smart parking system that detects,
+          allocates and manages parking using
+          vision + ML.
 ```
 
 </td>
@@ -91,9 +133,8 @@ about:    Smart parking system that
 status:   active
 type:     Service Platform API
 stack:    Python · Django · REST
-about:    Backend for an on-demand
-          car-wash booking and
-          dispatch platform.
+about:    Backend for an on-demand car-wash
+          booking and dispatch platform.
 ```
 
 </td>
@@ -105,38 +146,10 @@ about:    Backend for an on-demand
 ```yaml
 status:   active
 type:     Computer Vision
-stack:    Python · Mediapipe3 · Computer vision
-about:    This is an application that simulates
-          playing drums by tracking your
-          hand movements and using stored sounds.
-```
-
-</td>
-<td width="50%" valign="top">
-
-#### 🅽 [E-shop backend](https://github.com/AllanKariuki/e-commerce-backend)
-```yaml
-status:   active
-type:     Backend
-stack:    Django · Celery · Redis · Postgres vector · REPLICATE
-about:    This backend stores mappings of products that
-          can be used in searches to retrieve them.
-          It also interfaces with an ML model to help render
-          images of how the product would look in use.
-```
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-#### 🅽 [E-shop frontend](https://github.com/AllanKariuki/e-commerce-frontend)
-```yaml
-status:   active
-type:     Frontend
-stack:    React · Typescript · TailwindCSS
-about:    Customer-facing frontend for
-          hair and other products to try out.
+stack:    Python · Computer Vision
+about:    Simulates playing drums by tracking
+          hand movements via webcam and playing
+          stored sounds.
 ```
 
 </td>
@@ -146,7 +159,7 @@ about:    Customer-facing frontend for
 
 <div align="center">
   
-  `> 72 public repositories · pinned 6 above · explore more →` **[github.com/AllanKariuki?tab=repositories](https://github.com/AllanKariuki?tab=repositories)**
+  `> 82 public repositories · pinned 5 above · explore more →` **[github.com/AllanKariuki?tab=repositories](https://github.com/AllanKariuki?tab=repositories)**
   
 </div>
 
@@ -156,20 +169,37 @@ about:    Customer-facing frontend for
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=AllanKariuki&show_icons=true&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&title_color=00ff41&icon_color=00ff41&text_color=ffffff&include_all_commits=true&count_private=true" />
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AllanKariuki&layout=compact&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&title_color=00ff41&text_color=ffffff&langs_count=8" />
+<img width="48%" src="./assets/stats.svg" alt="stats" />
+<img width="48%" src="./assets/top-langs.svg" alt="top languages" />
 
 <br/>
 
-<img src="https://github-readme-streak-stats.herokuapp.com?user=AllanKariuki&theme=dark&hide_border=true&background=0d1117&stroke=00ff41&ring=00ff41&fire=00ff41&currStreakLabel=00ff41" alt="streak" />
+<img src="./assets/streak.svg" alt="streak" />
 
 <br/><br/>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=AllanKariuki&bg_color=0d1117&color=00ff41&line=00ff41&point=ffffff&area=true&hide_border=true" alt="activity graph" />
+<img src="./assets/activity.svg" alt="activity graph" />
 
-<br/><br/>
+<br/>
 
-<img src="https://github-profile-trophy.vercel.app/?username=AllanKariuki&theme=matrix&no-frame=true&no-bg=true&column=7&margin-w=10" alt="trophies" />
+<details>
+<summary><b>🔎 Zoom into a month</b></summary>
+<br/>
+
+<details><summary>Jan</summary><br/><img src="./assets/months/01.svg" alt="January contributions" /></details>
+<details><summary>Feb</summary><br/><img src="./assets/months/02.svg" alt="February contributions" /></details>
+<details><summary>Mar</summary><br/><img src="./assets/months/03.svg" alt="March contributions" /></details>
+<details><summary>Apr</summary><br/><img src="./assets/months/04.svg" alt="April contributions" /></details>
+<details><summary>May</summary><br/><img src="./assets/months/05.svg" alt="May contributions" /></details>
+<details><summary>Jun</summary><br/><img src="./assets/months/06.svg" alt="June contributions" /></details>
+<details><summary>Jul</summary><br/><img src="./assets/months/07.svg" alt="July contributions" /></details>
+<details><summary>Aug</summary><br/><img src="./assets/months/08.svg" alt="August contributions" /></details>
+<details><summary>Sep</summary><br/><img src="./assets/months/09.svg" alt="September contributions" /></details>
+<details><summary>Oct</summary><br/><img src="./assets/months/10.svg" alt="October contributions" /></details>
+<details><summary>Nov</summary><br/><img src="./assets/months/11.svg" alt="November contributions" /></details>
+<details><summary>Dec</summary><br/><img src="./assets/months/12.svg" alt="December contributions" /></details>
+
+</details>
 
 </div>
 
@@ -180,13 +210,13 @@ about:    Customer-facing frontend for
 <div align="center">
 
 <a href="https://www.linkedin.com/in/allan-kariuki-70bbb7186/">
-  <img src="https://img.shields.io/badge/LinkedIn-Allan%20Kariuki-0d1117?style=for-the-badge&logo=linkedin&logoColor=00ff41&labelColor=0d1117" />
+  <img src="https://img.shields.io/badge/LinkedIn-Allan%20Kariuki-0d1117?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzU4YTZmZiI%2BPHBhdGggZD0iTTIwLjQ0NyAyMC40NTJoLTMuNTU0di01LjU2OWMwLTEuMzI4LS4wMjctMy4wMzctMS44NTItMy4wMzctMS44NTMgMC0yLjEzNiAxLjQ0NS0yLjEzNiAyLjkzOXY1LjY2N0g5LjM1MVY5aDMuNDE0djEuNTYxaC4wNDZjLjQ3Ny0uOSAxLjYzNy0xLjg1IDMuMzctMS44NSAzLjYwMSAwIDQuMjY3IDIuMzcgNC4yNjcgNS40NTV2Ni4yODZ6TTUuMzM3IDcuNDMzYy0xLjE0NCAwLTIuMDYzLS45MjYtMi4wNjMtMi4wNjUgMC0xLjEzOC45Mi0yLjA2MyAyLjA2My0yLjA2MyAxLjE0IDAgMi4wNjQuOTI1IDIuMDY0IDIuMDYzIDAgMS4xMzktLjkyNSAyLjA2NS0yLjA2NCAyLjA2NXptMS43ODIgMTMuMDE5SDMuNTU1VjloMy41NjR2MTEuNDUyek0yMi4yMjUgMEgxLjc3MUMuNzkyIDAgMCAuNzc0IDAgMS43Mjl2MjAuNTQyQzAgMjMuMjI3Ljc5MiAyNCAxLjc3MSAyNGgyMC40NTFDMjMuMiAyNCAyNCAyMy4yMjcgMjQgMjIuMjcxVjEuNzI5QzI0IC43NzQgMjMuMiAwIDIyLjIyNSAweiIvPjwvc3ZnPg%3D%3D&logoColor=58a6ff&labelColor=0d1117" />
 </a>
 <a href="mailto:allankariuki96@gmail.com">
-  <img src="https://img.shields.io/badge/Email-allankariuki96@gmail.com-0d1117?style=for-the-badge&logo=gmail&logoColor=00ff41&labelColor=0d1117" />
+  <img src="https://img.shields.io/badge/Email-allankariuki96@gmail.com-0d1117?style=for-the-badge&logo=gmail&logoColor=58a6ff&labelColor=0d1117" />
 </a>
 <a href="https://github.com/AllanKariuki">
-  <img src="https://img.shields.io/badge/GitHub-@AllanKariuki-0d1117?style=for-the-badge&logo=github&logoColor=00ff41&labelColor=0d1117" />
+  <img src="https://img.shields.io/badge/GitHub-@AllanKariuki-0d1117?style=for-the-badge&logo=github&logoColor=58a6ff&labelColor=0d1117" />
 </a>
 
 </div>
@@ -200,6 +230,6 @@ $ echo "Thanks for stopping by — let's build something that matters."
 > Connection closed. EOF.
 ```
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00ff41,100:0d1117&height=100&section=footer" alt="footer"/>
+<img src="./assets/footer.svg" alt="footer"/>
 
 </div>
