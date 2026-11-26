@@ -169,8 +169,8 @@ about:    Simulates playing drums by tracking
 
 <div align="center">
 
-<img width="49%" src="./assets/stats.svg" alt="stats" />
-<img width="49%" src="./assets/top-langs.svg" alt="top languages" />
+<img width="48%" src="./assets/stats.svg" alt="stats" />
+<img width="48%" src="./assets/top-langs.svg" alt="top languages" />
 
 <br/>
 
@@ -179,6 +179,27 @@ about:    Simulates playing drums by tracking
 <br/><br/>
 
 <img src="./assets/activity.svg" alt="activity graph" />
+
+<br/>
+
+<details>
+<summary><b>🔎 Zoom into a month</b></summary>
+<br/>
+
+<details><summary>Jan</summary><br/><img src="./assets/months/01.svg" alt="January contributions" /></details>
+<details><summary>Feb</summary><br/><img src="./assets/months/02.svg" alt="February contributions" /></details>
+<details><summary>Mar</summary><br/><img src="./assets/months/03.svg" alt="March contributions" /></details>
+<details><summary>Apr</summary><br/><img src="./assets/months/04.svg" alt="April contributions" /></details>
+<details><summary>May</summary><br/><img src="./assets/months/05.svg" alt="May contributions" /></details>
+<details><summary>Jun</summary><br/><img src="./assets/months/06.svg" alt="June contributions" /></details>
+<details><summary>Jul</summary><br/><img src="./assets/months/07.svg" alt="July contributions" /></details>
+<details><summary>Aug</summary><br/><img src="./assets/months/08.svg" alt="August contributions" /></details>
+<details><summary>Sep</summary><br/><img src="./assets/months/09.svg" alt="September contributions" /></details>
+<details><summary>Oct</summary><br/><img src="./assets/months/10.svg" alt="October contributions" /></details>
+<details><summary>Nov</summary><br/><img src="./assets/months/11.svg" alt="November contributions" /></details>
+<details><summary>Dec</summary><br/><img src="./assets/months/12.svg" alt="December contributions" /></details>
+
+</details>
 
 </div>
 

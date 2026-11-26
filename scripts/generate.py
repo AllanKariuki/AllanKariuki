@@ -32,6 +32,8 @@ MONO = "'Fira Code', 'Cascadia Code', Consolas, 'Courier New', monospace"
 
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+MONTH_NAMES = ["January", "February", "March", "April", "May", "June",
+               "July", "August", "September", "October", "November", "December"]
 
 # GitHub Octicons 16px path data (viewBox "0 0 16 16").
 # (c) GitHub, MIT License — https://github.com/primer/octicons (MIT).
@@ -702,105 +704,118 @@ def render_streak(d):
     return "\n".join(parts)
 
 
-def render_activity(d):
-    width, height = 830, 290
-    act = d["activity"]
-    year = act["year"]
-    today_doy = act["today_doy"]
-    current = act["current"]
-    previous = act["previous"]
+CHART_W, CHART_H = 830, 290
+CHART_ML, CHART_MR, CHART_MT, CHART_MB = 64, 20, 72, 48
 
-    days_in_year = _days_in_year(year)
-    n_buckets = len(current)
-    today_bucket = min(today_doy // 7, n_buckets - 1)
 
-    ml, mr, mt, mb = 64, 20, 62, 48
-    px0, px1 = ml, width - mr
-    py0, py1 = mt, height - mb
+def _chart_x(fraction):
+    """Map a 0..1 fraction of the plot width to an SVG x coordinate."""
+    return CHART_ML + fraction * (CHART_W - CHART_ML - CHART_MR)
+
+
+def _render_trend_chart(title, subtitle, x_labels, x_axis_title,
+                        cur_points, prev_points, today_index,
+                        width=CHART_W, height=CHART_H, x_gridlines=None,
+                        cur_label="This year", prev_label="Last year"):
+    """Render the shared gradient trend chart (year and month views).
+
+    ``cur_points`` and ``prev_points`` are ``(x, raw_value)`` pairs; ``x`` is a
+    pre-computed SVG coordinate (see ``_chart_x``) and ``raw_value`` is scaled
+    to the plot here. ``today_index`` marks the last real current-period point:
+    the line is drawn only up to it, a today marker is placed on it, and the
+    remaining buckets continue as a faded ghost using ``prev_points`` values.
+    Pass ``None`` for a finished period (full line, no marker/ghost) or ``[]``
+    for a future period (no current line at all).
+    """
+    px0, px1 = CHART_ML, width - CHART_MR
+    py0, py1 = CHART_MT, height - CHART_MB
     pw, ph = px1 - px0, py1 - py0
 
-    all_vals = list(current) + list(previous)
-    raw_max = nice_max(max(all_vals) if all_vals else 0)
-    # Round the scale up to a multiple of 4 so quarter-gridline ticks are ints.
+    if today_index is None:
+        real = [v for _x, v in cur_points] + [v for _x, v in prev_points]
+    else:
+        real = [v for _x, v in cur_points[:today_index + 1]] + [v for _x, v in prev_points]
+    raw_max = nice_max(max(real) if real else 0)
     ymax = max(4, int(math.ceil(raw_max / 4.0) * 4))
 
-    def x_for_bucket(i, days):
-        start = i * 7
-        end = min((i + 1) * 7, days)
-        mid = (start + end) / 2.0
-        return px0 + (mid / days) * pw
+    def y_of(value):
+        return py1 - (value / ymax) * ph
 
-    # Current year: buckets up to and including today's bucket.
-    cur_pts = []
-    for i in range(today_bucket + 1):
-        cur_pts.append((x_for_bucket(i, days_in_year), py1 - (current[i] / ymax) * ph))
+    cur_scaled = [(x, y_of(v)) for x, v in cur_points]
+    prev_scaled = [(x, y_of(v)) for x, v in prev_points]
 
-    # Previous year: the whole year.
-    prev_days = _days_in_year(year - 1)
-    prev_pts = []
-    for i in range(len(previous)):
-        prev_pts.append((x_for_bucket(i, prev_days), py1 - (previous[i] / ymax) * ph))
+    if today_index is None:
+        cur_upto = cur_scaled
+    else:
+        cur_upto = cur_scaled[:today_index + 1]
 
-    cur_line = catmull_rom_to_bezier(cur_pts, py0, py1) if len(cur_pts) >= 2 else ""
-    cur_area = f"{cur_line} L {cur_pts[-1][0]:.1f} {py1} L {cur_pts[0][0]:.1f} {py1} Z" if cur_line else ""
-    prev_line = catmull_rom_to_bezier(prev_pts, py0, py1) if len(prev_pts) >= 2 else ""
+    cur_line = catmull_rom_to_bezier(cur_upto, py0, py1) if len(cur_upto) >= 2 else ""
+    cur_area = f"{cur_line} L {cur_upto[-1][0]:.1f} {py1} L {cur_upto[0][0]:.1f} {py1} Z" if cur_line else ""
+    prev_line = catmull_rom_to_bezier(prev_scaled, py0, py1) if len(prev_scaled) >= 2 else ""
 
-    # Ghost: from today's point, continue with last year's values for future weeks.
-    ghost_pts = []
-    if cur_pts and today_bucket < n_buckets - 1:
-        ghost_pts.append(cur_pts[-1])
-        for i in range(today_bucket + 1, n_buckets):
-            value = previous[i] if i < len(previous) else 0
-            ghost_pts.append((x_for_bucket(i, days_in_year), py1 - (value / ymax) * ph))
-    ghost_line = catmull_rom_to_bezier(ghost_pts, py0, py1) if len(ghost_pts) >= 2 else ""
-    ghost_area = f"{ghost_line} L {ghost_pts[-1][0]:.1f} {py1} L {ghost_pts[0][0]:.1f} {py1} Z" if ghost_line else ""
+    ghost_scaled = []
+    if today_index is not None and cur_scaled and today_index < len(cur_scaled) - 1:
+        ghost_scaled.append((cur_scaled[today_index][0], cur_scaled[today_index][1]))
+        for i in range(today_index + 1, len(cur_scaled)):
+            value = prev_points[i][1] if i < len(prev_points) else 0
+            ghost_scaled.append((cur_scaled[i][0], y_of(value)))
+    ghost_line = catmull_rom_to_bezier(ghost_scaled, py0, py1) if len(ghost_scaled) >= 2 else ""
+    ghost_area = f"{ghost_line} L {ghost_scaled[-1][0]:.1f} {py1} L {ghost_scaled[0][0]:.1f} {py1} Z" if ghost_line else ""
 
     parts = [
         f'<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" '
-        'xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Contribution activity">',
+        'xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Contribution chart">',
         _bg(width, height),
-        f'<text x="{width / 2:.1f}" y="26" text-anchor="middle" font-family="{FONT}" '
-        f'font-size="14" font-weight="700" fill="{ACCENT}">Contribution Activity · {year}</text>',
-        # Centered legend row under the title.
-        f'<line x1="322" y1="46" x2="344" y2="46" stroke="{ACCENT}" stroke-width="2.5"/>',
-        f'<text x="350" y="50" font-family="{FONT}" font-size="11" fill="{MUTED}">This year</text>',
-        f'<line x1="430" y1="46" x2="452" y2="46" stroke="{MUTED}" stroke-width="1.5" '
-        'stroke-dasharray="1.5 4" stroke-linecap="round"/>',
-        f'<text x="458" y="50" font-family="{FONT}" font-size="11" fill="{MUTED}">Last year</text>',
-        "<defs>",
-        f'<linearGradient id="linegrad" gradientUnits="userSpaceOnUse" '
-        f'x1="{px0}" y1="0" x2="{px1}" y2="0">',
-        '<stop offset="0" stop-color="#39d0d8"/>',
-        f'<stop offset="0.33" stop-color="{ACCENT}"/>',
-        '<stop offset="0.66" stop-color="#a371f7"/>',
-        '<stop offset="1" stop-color="#bc8cff"/>',
-        "</linearGradient>",
-        '<linearGradient id="fademask" x1="0" y1="0" x2="0" y2="1">',
-        '<stop offset="0" stop-color="#ffffff"/>',
-        '<stop offset="1" stop-color="#000000"/>',
-        "</linearGradient>",
-        f'<mask id="areamask"><rect x="{px0}" y="{py0}" width="{pw}" height="{ph}" '
-        'fill="url(#fademask)"/></mask>',
-        f'<clipPath id="pc"><rect x="{px0}" y="{py0}" width="{pw}" height="{ph}"/></clipPath>',
-        "</defs>",
+        f'<text x="{width / 2:.1f}" y="24" text-anchor="middle" font-family="{FONT}" '
+        f'font-size="14" font-weight="700" fill="{ACCENT}">{esc(title)}</text>',
     ]
+    if subtitle:
+        parts.append(
+            f'<text x="{width / 2:.1f}" y="42" text-anchor="middle" font-family="{FONT}" '
+            f'font-size="11" fill="{MUTED}">{esc(subtitle)}</text>'
+        )
+    # Centered legend row.
+    parts.append(
+        f'<line x1="318" y1="58" x2="340" y2="58" stroke="{ACCENT}" stroke-width="2.5"/>'
+    )
+    parts.append(
+        f'<text x="346" y="62" font-family="{FONT}" font-size="11" fill="{MUTED}">{esc(cur_label)}</text>'
+    )
+    parts.append(
+        f'<line x1="436" y1="58" x2="458" y2="58" stroke="{MUTED}" stroke-width="1.5" '
+        'stroke-dasharray="1.5 4" stroke-linecap="round"/>'
+    )
+    parts.append(
+        f'<text x="464" y="62" font-family="{FONT}" font-size="11" fill="{MUTED}">{esc(prev_label)}</text>'
+    )
+    parts.append(
+        "<defs>"
+        f'<linearGradient id="linegrad" gradientUnits="userSpaceOnUse" '
+        f'x1="{px0}" y1="0" x2="{px1}" y2="0">'
+        '<stop offset="0" stop-color="#39d0d8"/>'
+        f'<stop offset="0.33" stop-color="{ACCENT}"/>'
+        '<stop offset="0.66" stop-color="#a371f7"/>'
+        '<stop offset="1" stop-color="#bc8cff"/>'
+        "</linearGradient>"
+        '<linearGradient id="fademask" x1="0" y1="0" x2="0" y2="1">'
+        '<stop offset="0" stop-color="#ffffff"/>'
+        '<stop offset="1" stop-color="#000000"/>'
+        "</linearGradient>"
+        f'<mask id="areamask"><rect x="{px0}" y="{py0}" width="{pw}" height="{ph}" fill="url(#fademask)"/></mask>'
+        f'<clipPath id="pc"><rect x="{px0}" y="{py0}" width="{pw}" height="{ph}"/></clipPath>'
+        "</defs>",
+    )
 
-    # Month gridlines + labels.
-    for m in range(1, 13):
-        start_doy = (date(year, m, 1) - date(year, 1, 1)).days
-        gx = px0 + (start_doy / days_in_year) * pw
+    for gx in (x_gridlines or []):
         parts.append(
             f'<line x1="{gx:.1f}" y1="{py0}" x2="{gx:.1f}" y2="{py1}" '
             f'stroke="{GRID}" stroke-width="1"/>'
         )
-        mid_doy = start_doy + _month_length(year, m) / 2.0
-        lx = px0 + (mid_doy / days_in_year) * pw
+    for x, label in x_labels:
         parts.append(
-            f'<text x="{lx:.1f}" y="258" text-anchor="middle" font-family="{FONT}" '
-            f'font-size="11" fill="{MUTED}">{MONTHS[m - 1]}</text>'
+            f'<text x="{x:.1f}" y="258" text-anchor="middle" font-family="{FONT}" '
+            f'font-size="11" fill="{MUTED}">{esc(label)}</text>'
         )
-
-    # Horizontal gridlines + y-axis tick labels at quarters of the scale.
     for i in range(5):
         frac = i / 4.0
         gy = py1 - frac * ph
@@ -812,36 +827,28 @@ def render_activity(d):
             f'<text x="{px0 - 8}" y="{gy + 3.5:.1f}" text-anchor="end" '
             f'font-family="{FONT}" font-size="10" fill="{MUTED}">{ymax * i // 4}</text>'
         )
-
-    # Y-axis title (rotated), left of the tick labels and centred on the plot.
     mid_y = (py0 + py1) / 2.0
     parts.append(
         f'<text x="22" y="{mid_y:.1f}" text-anchor="middle" font-family="{FONT}" '
         f'font-size="11" font-weight="700" fill="{ACCENT}" '
         f'transform="rotate(-90 22 {mid_y:.1f})">Contributions</text>'
     )
-    # X-axis title, centred under the month labels.
     parts.append(
         f'<text x="{width / 2:.1f}" y="278" text-anchor="middle" font-family="{FONT}" '
-        f'font-size="11" font-weight="700" fill="{ACCENT}">Month</text>'
+        f'font-size="11" font-weight="700" fill="{ACCENT}">{esc(x_axis_title)}</text>'
     )
 
-    # Previous-year full dotted line (behind everything else).
     if prev_line:
         parts.append(
             f'<path d="{prev_line}" fill="none" stroke="{MUTED}" stroke-width="1.5" '
             'stroke-dasharray="1.5 4" stroke-linecap="round" clip-path="url(#pc)"/>'
         )
-
-    # Ghost (future) continuation in last year's values.
     if ghost_line:
         parts.append(f'<path d="{ghost_area}" fill="{ACCENT}" opacity="0.05" clip-path="url(#pc)"/>')
         parts.append(
             f'<path d="{ghost_line}" fill="none" stroke="{ACCENT}" stroke-width="2.5" '
             'opacity="0.25" clip-path="url(#pc)"/>'
         )
-
-    # Current-year gradient line + area.
     if cur_line:
         parts.append(
             f'<path d="{cur_area}" fill="url(#linegrad)" opacity="0.22" '
@@ -851,10 +858,8 @@ def render_activity(d):
             f'<path d="{cur_line}" fill="none" stroke="url(#linegrad)" '
             'stroke-width="2.5" clip-path="url(#pc)"/>'
         )
-
-    # Today marker.
-    if cur_pts:
-        tx, ty = cur_pts[-1]
+    if today_index is not None and cur_scaled:
+        tx, ty = cur_scaled[today_index]
         parts.append(
             f'<line x1="{tx:.1f}" y1="{py0}" x2="{tx:.1f}" y2="{py1}" '
             f'stroke="{MUTED}" stroke-dasharray="2 4"/>'
@@ -866,6 +871,87 @@ def render_activity(d):
 
     parts.append("</svg>")
     return "\n".join(parts)
+
+
+def render_activity(d):
+    act = d["activity"]
+    year = act["year"]
+    today_doy = act["today_doy"]
+    current = act["current"]
+    previous = act["previous"]
+
+    days_in_year = _days_in_year(year)
+    n_buckets = len(current)
+    today_bucket = min(today_doy // 7, n_buckets - 1)
+
+    def bucket_frac(i, days):
+        start = i * 7
+        end = min((i + 1) * 7, days)
+        return ((start + end) / 2.0) / days
+
+    cur_points = [(_chart_x(bucket_frac(i, days_in_year)), current[i]) for i in range(n_buckets)]
+    prev_days = _days_in_year(year - 1)
+    prev_points = [(_chart_x(bucket_frac(i, prev_days)), previous[i]) for i in range(len(previous))]
+
+    x_labels = []
+    x_gridlines = []
+    for m in range(1, 13):
+        start_doy = (date(year, m, 1) - date(year, 1, 1)).days
+        x_gridlines.append(_chart_x(start_doy / days_in_year))
+        mid_doy = start_doy + _month_length(year, m) / 2.0
+        x_labels.append((_chart_x(mid_doy / days_in_year), MONTHS[m - 1]))
+
+    this_year = sum(current[: today_bucket + 1])
+    last_year = sum(previous)
+    subtitle = f"{fmt_num(this_year)} contributions so far · {fmt_num(last_year)} in {year - 1}"
+    return _render_trend_chart(
+        f"Contribution Activity · {year}", subtitle, x_labels, "Month",
+        cur_points, prev_points, today_bucket, x_gridlines=x_gridlines,
+        cur_label="This year", prev_label="Last year",
+    )
+
+
+def render_month(d, year, month):
+    """Daily trend chart for ``month`` (1-12) of the current ``year``."""
+    calendar = d["calendar"]
+    today = date(year, 1, 1) + timedelta(days=d["activity"]["today_doy"])
+    days_in_month = _month_length(year, month)
+
+    cur_daily = [calendar.get(f"{year:04d}-{month:02d}-{day:02d}", 0)
+                 for day in range(1, days_in_month + 1)]
+    prev_days = _month_length(year - 1, month)
+    prev_daily = [calendar.get(f"{year - 1:04d}-{month:02d}-{day:02d}", 0)
+                  for day in range(1, prev_days + 1)]
+
+    total = sum(cur_daily)
+    future = date(year, month, 1) > today
+
+    if future or total == 0:
+        subtitle = "No contributions yet"
+        today_index = None
+    else:
+        best = max(range(days_in_month), key=lambda i: cur_daily[i])
+        subtitle = (f"{total} contributions · best day "
+                    f"{fmt_day(date(year, month, best + 1))} ({cur_daily[best]})")
+        today_index = today.day - 1 if (year == today.year and month == today.month) else None
+
+    x_labels = []
+    x_gridlines = []
+    for day in (1, 5, 10, 15, 20, 25, days_in_month):
+        x = _chart_x((day - 0.5) / days_in_month)
+        x_labels.append((x, str(day)))
+        x_gridlines.append(x)
+
+    cur_points = []
+    if not future:
+        cur_points = [(_chart_x((i + 0.5) / days_in_month), v) for i, v in enumerate(cur_daily)]
+    prev_points = [(_chart_x((i + 0.5) / prev_days), v) for i, v in enumerate(prev_daily)]
+
+    return _render_trend_chart(
+        f"{MONTH_NAMES[month - 1]} {year}", subtitle, x_labels, "Day",
+        cur_points, prev_points, today_index, x_gridlines=x_gridlines,
+        cur_label="This month", prev_label="Last year",
+    )
 
 
 # --------------------------------------------------------------------------- #
@@ -966,6 +1052,7 @@ def main(argv=None):
                 "languages": lang_list,
                 "streak": streaks,
                 "activity": activity,
+                "calendar": calendar,
             }
             rendered.update({
                 "stats.svg": render_stats(data),
@@ -973,6 +1060,10 @@ def main(argv=None):
                 "streak.svg": render_streak(data),
                 "activity.svg": render_activity(data),
             })
+            months_dir = os.path.join(out_dir, "months")
+            os.makedirs(months_dir, exist_ok=True)
+            for month in range(1, 13):
+                rendered[f"months/{month:02d}.svg"] = render_month(data, current_year, month)
         except Exception as exc:  # keep last good assets on failure
             print(f"error: {exc}", file=sys.stderr)
             return 1
