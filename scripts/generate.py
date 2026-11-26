@@ -94,17 +94,6 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
 }
 """
 
-TROPHY_THRESHOLDS = {
-    "Commits": {"S": 2000, "A": 1000, "B": 500, "C": 100},
-    "Stars": {"S": 100, "A": 50, "B": 20, "C": 5},
-    "Followers": {"S": 100, "A": 50, "B": 20, "C": 10},
-    "Repos": {"S": 80, "A": 50, "B": 30, "C": 10},
-    "PRs": {"S": 200, "A": 100, "B": 50, "C": 10},
-    "Issues": {"S": 100, "A": 50, "B": 20, "C": 5},
-    "Years": {"S": 5, "A": 4, "B": 3, "C": 1},
-}
-
-
 # --------------------------------------------------------------------------- #
 # Small helpers
 # --------------------------------------------------------------------------- #
@@ -719,7 +708,7 @@ def render_streak(d):
 
 
 def render_activity(d):
-    width, height = 830, 260
+    width, height = 830, 290
     act = d["activity"]
     year = act["year"]
     today_doy = act["today_doy"]
@@ -730,13 +719,15 @@ def render_activity(d):
     n_buckets = len(current)
     today_bucket = min(today_doy // 7, n_buckets - 1)
 
-    ml, mr, mt, mb = 48, 20, 56, 40
+    ml, mr, mt, mb = 64, 20, 62, 48
     px0, px1 = ml, width - mr
     py0, py1 = mt, height - mb
     pw, ph = px1 - px0, py1 - py0
 
     all_vals = list(current) + list(previous)
-    ymax = nice_max(max(all_vals) if all_vals else 0)
+    raw_max = nice_max(max(all_vals) if all_vals else 0)
+    # Round the scale up to a multiple of 4 so quarter-gridline ticks are ints.
+    ymax = max(4, int(math.ceil(raw_max / 4.0) * 4))
 
     def x_for_bucket(i, days):
         start = i * 7
@@ -773,14 +764,14 @@ def render_activity(d):
         f'<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" '
         'xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Contribution activity">',
         _bg(width, height),
-        f'<text x="24" y="30" font-family="{FONT}" font-size="14" font-weight="700" '
-        f'fill="{ACCENT}">Contribution Activity · {year}</text>',
-        # Legend (top-right).
-        f'<line x1="590" y1="22" x2="612" y2="22" stroke="{ACCENT}" stroke-width="2.5"/>',
-        f'<text x="618" y="26" font-family="{FONT}" font-size="11" fill="{MUTED}">This year</text>',
-        f'<line x1="700" y1="22" x2="722" y2="22" stroke="{MUTED}" stroke-width="1.5" '
+        f'<text x="{width / 2:.1f}" y="26" text-anchor="middle" font-family="{FONT}" '
+        f'font-size="14" font-weight="700" fill="{ACCENT}">Contribution Activity · {year}</text>',
+        # Centered legend row under the title.
+        f'<line x1="322" y1="46" x2="344" y2="46" stroke="{ACCENT}" stroke-width="2.5"/>',
+        f'<text x="350" y="50" font-family="{FONT}" font-size="11" fill="{MUTED}">This year</text>',
+        f'<line x1="430" y1="46" x2="452" y2="46" stroke="{MUTED}" stroke-width="1.5" '
         'stroke-dasharray="1.5 4" stroke-linecap="round"/>',
-        f'<text x="728" y="26" font-family="{FONT}" font-size="11" fill="{MUTED}">Last year</text>',
+        f'<text x="458" y="50" font-family="{FONT}" font-size="11" fill="{MUTED}">Last year</text>',
         "<defs>",
         f'<linearGradient id="linegrad" gradientUnits="userSpaceOnUse" '
         f'x1="{px0}" y1="0" x2="{px1}" y2="0">',
@@ -810,22 +801,34 @@ def render_activity(d):
         mid_doy = start_doy + _month_length(year, m) / 2.0
         lx = px0 + (mid_doy / days_in_year) * pw
         parts.append(
-            f'<text x="{lx:.1f}" y="{height - 14}" text-anchor="middle" font-family="{FONT}" '
+            f'<text x="{lx:.1f}" y="258" text-anchor="middle" font-family="{FONT}" '
             f'font-size="11" fill="{MUTED}">{MONTHS[m - 1]}</text>'
         )
 
-    # 4 horizontal gridlines.
-    for frac in (0.0, 1 / 3, 2 / 3, 1.0):
+    # Horizontal gridlines + y-axis tick labels at quarters of the scale.
+    for i in range(5):
+        frac = i / 4.0
         gy = py1 - frac * ph
         parts.append(
             f'<line x1="{px0}" y1="{gy:.1f}" x2="{px1}" y2="{gy:.1f}" '
             f'stroke="{GRID}" stroke-width="1"/>'
         )
+        parts.append(
+            f'<text x="{px0 - 8}" y="{gy + 3.5:.1f}" text-anchor="end" '
+            f'font-family="{FONT}" font-size="10" fill="{MUTED}">{ymax * i // 4}</text>'
+        )
 
-    # Small max label top-left of the plot.
+    # Y-axis title (rotated), left of the tick labels and centred on the plot.
+    mid_y = (py0 + py1) / 2.0
     parts.append(
-        f'<text x="{px0}" y="{py0 - 8}" font-family="{FONT}" font-size="10" '
-        f'fill="{MUTED}">{ymax:g}</text>'
+        f'<text x="22" y="{mid_y:.1f}" text-anchor="middle" font-family="{FONT}" '
+        f'font-size="11" font-weight="700" fill="{ACCENT}" '
+        f'transform="rotate(-90 22 {mid_y:.1f})">Contributions</text>'
+    )
+    # X-axis title, centred under the month labels.
+    parts.append(
+        f'<text x="{width / 2:.1f}" y="278" text-anchor="middle" font-family="{FONT}" '
+        f'font-size="11" font-weight="700" fill="{ACCENT}">Month</text>'
     )
 
     # Previous-year full dotted line (behind everything else).
@@ -870,71 +873,6 @@ def render_activity(d):
     return "\n".join(parts)
 
 
-def _rank(value, thresholds):
-    for rank in ("S", "A", "B", "C"):
-        if value >= thresholds[rank]:
-            return rank
-    return "?"
-
-
-def _cup(cx, top):
-    w = 20
-    parts = [
-        f'<path d="M {cx - w} {top} L {cx + w} {top} L {cx + w} {top + 16} '
-        f'Q {cx + w} {top + 22} {cx + w - 6} {top + 22} '
-        f'L {cx + 5} {top + 22} L {cx + 5} {top + 28} L {cx - 5} {top + 28} '
-        f'L {cx - 5} {top + 22} L {cx - w + 6} {top + 22} '
-        f'Q {cx - w} {top + 22} {cx - w} {top + 16} Z" '
-        f'fill="none" stroke="{ACCENT}" stroke-width="2"/>',
-        f'<path d="M {cx - w} {top + 3} Q {cx - w - 7} {top + 3} {cx - w - 7} {top + 9} '
-        f'Q {cx - w - 7} {top + 15} {cx - w} {top + 15}" '
-        f'fill="none" stroke="{ACCENT}" stroke-width="2"/>',
-        f'<path d="M {cx + w} {top + 3} Q {cx + w + 7} {top + 3} {cx + w + 7} {top + 9} '
-        f'Q {cx + w + 7} {top + 15} {cx + w} {top + 15}" '
-        f'fill="none" stroke="{ACCENT}" stroke-width="2"/>',
-        f'<rect x="{cx - 14}" y="{top + 28}" width="28" height="6" rx="2" '
-        f'fill="none" stroke="{ACCENT}" stroke-width="2"/>',
-    ]
-    return "".join(parts)
-
-
-def render_trophies(d):
-    width, height = 800, 140
-    items = [
-        ("Commits", d["commits"]),
-        ("Stars", d["stars"]),
-        ("Followers", d["followers"]),
-        ("Repos", d["repos"]),
-        ("PRs", d["prs"]),
-        ("Issues", d["issues"]),
-        ("Years", d["years"]),
-    ]
-    col_w = width / len(items)
-    parts = [
-        f'<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" '
-        'xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GitHub trophies">',
-        _bg(width, height),
-    ]
-    for i, (label, value) in enumerate(items):
-        cx = col_w * (i + 0.5)
-        rank = _rank(value, TROPHY_THRESHOLDS[label])
-        parts.append(
-            f'<text x="{cx:.1f}" y="22" text-anchor="middle" font-family="{FONT}" '
-            f'font-size="15" font-weight="700" fill="{ACCENT}">{rank}</text>'
-        )
-        parts.append(_cup(cx, 30))
-        parts.append(
-            f'<text x="{cx:.1f}" y="104" text-anchor="middle" font-family="{FONT}" '
-            f'font-size="11" fill="{MUTED}">{esc(label)}</text>'
-        )
-        parts.append(
-            f'<text x="{cx:.1f}" y="117" text-anchor="middle" font-family="{FONT}" '
-            f'font-size="12" font-weight="700" fill="{TEXT}">{fmt_num(value)}</text>'
-        )
-    parts.append("</svg>")
-    return "\n".join(parts)
-
-
 # --------------------------------------------------------------------------- #
 # Entry point
 # --------------------------------------------------------------------------- #
@@ -971,9 +909,6 @@ def main(argv=None):
             calendar = contrib["calendar"]
             totals = contrib["totals"]
             streaks = compute_streaks(calendar)
-
-            created = datetime.fromisoformat(profile["created_at"].replace("Z", "+00:00")).date()
-            years = date.today().year - created.year
 
             langs_sorted = sorted(
                 profile["languages"].items(), key=lambda kv: -kv[1]["size"]
@@ -1027,7 +962,6 @@ def main(argv=None):
                 "contributed_to": profile["contributed_to"],
                 "followers": profile["followers"],
                 "repos": profile["repos"],
-                "years": years,
                 "commits_this_year": commits_this_year,
                 "contributions_this_year": contributions_this_year,
                 "weekly": weekly,
@@ -1043,7 +977,6 @@ def main(argv=None):
                 "top-langs.svg": render_langs(data),
                 "streak.svg": render_streak(data),
                 "activity.svg": render_activity(data),
-                "trophies.svg": render_trophies(data),
             })
         except Exception as exc:  # keep last good assets on failure
             print(f"error: {exc}", file=sys.stderr)

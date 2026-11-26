@@ -8,9 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased] - 2026-11-26
 
 ### Added
-- `scripts/generate.py`: a stdlib-only Python generator that renders every profile SVG (stats, top languages, streak, activity graph, trophies, header, typing and footer) from the GitHub GraphQL API.
+- `scripts/generate.py`: a stdlib-only Python generator that renders every profile SVG (stats, top languages, streak, activity graph, header, typing and footer) from the GitHub GraphQL API.
 - `.github/workflows/profile-assets.yml`: a GitHub Action that regenerates and commits `assets/*.svg` on a daily schedule, manual dispatch, or pushes to `scripts/**` / the workflow file.
-- `assets/*.svg` (generated output): self-hosted replacements for the previously external stats, streak, activity, trophy, banner and typing widgets.
+- `assets/*.svg` (generated output): self-hosted replacements for the previously external stats, streak, activity, banner and typing widgets.
 - `CHANGELOG.md`.
 
 ### Changed
@@ -21,9 +21,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Theme switched from green to blue (#58a6ff).
 - Stats card redesigned with icons, 8 metrics and an activity grade ring.
 - Streak card restored to the three-column layout with dividers and a fire icon.
-- Stats and streak now share one row.
+- Stats and streak cards sized to 49% width so they share one row on GitHub.
 - Activity graph redesigned as a year view with gradient line, last-year comparison and today marker.
+- Activity graph title centered; added axis titles, y-axis ticks and a centered legend.
+
+### Removed
+- Trophies section and its generator.
 
 ### Fixed
-- Replaced the broken "Could not fetch total commits" stats card and broken trophy image with in-repo equivalents.
+- Replaced the broken "Could not fetch total commits" stats card with an in-repo equivalent.
 - Removed the two outdated e-commerce pinned cards.

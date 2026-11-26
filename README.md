@@ -169,8 +169,8 @@ about:    Simulates playing drums by tracking
 
 <div align="center">
 
-<img height="195" src="./assets/stats.svg" alt="stats" />
-<img height="195" src="./assets/streak.svg" alt="streak" />
+<img width="49%" src="./assets/stats.svg" alt="stats" />
+<img width="49%" src="./assets/streak.svg" alt="streak" />
 
 <br/>
 
@@ -179,10 +179,6 @@ about:    Simulates playing drums by tracking
 <br/><br/>
 
 <img src="./assets/activity.svg" alt="activity graph" />
-
-<br/><br/>
-
-<img src="./assets/trophies.svg" alt="trophies" />
 
 </div>
 
