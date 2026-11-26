@@ -1,0 +1,15 @@
+<svg width="720" height="220" viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Allan Kariuki banner">
+<defs>
+<linearGradient id="hg" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#0d1117"/>
+<stop offset="1" stop-color="#00ff41"/>
+</linearGradient>
+</defs>
+<rect width="720" height="220" fill="url(#hg)"/>
+<path d="M0 178 C 120 214, 240 120, 360 178 S 600 214, 720 178 L 720 220 L 0 220 Z" fill="#0d1117"/>
+<g>
+<animate attributeName="opacity" from="0" to="1" dur="1.2s" fill="freeze" begin="0s"/>
+<text x="360" y="88" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="64" font-weight="700" fill="#ffffff">Allan Kariuki</text>
+<text x="360" y="132" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#ffffff">Software Engineer | ML · Backend · Web3</text>
+</g>
+</svg>

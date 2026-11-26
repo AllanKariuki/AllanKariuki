@@ -1,0 +1,47 @@
+<svg width="720" height="50" viewBox="0 0 720 50" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Terminal typing animation">
+<rect width="720" height="50" rx="8" fill="#0d1117"/>
+<style>
+.t { font-family: 'Fira Code', 'Cascadia Code', Consolas, 'Courier New', monospace; font-size: 20px; fill: #00ff41; }
+@keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+.cursor { animation: blink 0.8s steps(1) infinite; }
+@keyframes l0 {
+  0% { -webkit-clip-path: inset(0 100% 0 0); clip-path: inset(0 100% 0 0); opacity: 0; }
+  6.250% { -webkit-clip-path: inset(0 0 0 0); clip-path: inset(0 0 0 0); opacity: 1; }
+  18.750% { -webkit-clip-path: inset(0 0 0 0); clip-path: inset(0 0 0 0); opacity: 1; }
+  21.250% { -webkit-clip-path: inset(0 100% 0 0); clip-path: inset(0 100% 0 0); opacity: 0; }
+  100% { -webkit-clip-path: inset(0 100% 0 0); clip-path: inset(0 100% 0 0); opacity: 0; }
+}
+.l0 { animation: l0 16.0s linear infinite; }
+@keyframes l1 {
+  0% { -webkit-clip-path: inset(0 100% 0 0); clip-path: inset(0 100% 0 0); opacity: 0; }
+  25.000% { -webkit-clip-path: inset(0 100% 0 0); clip-path: inset(0 100% 0 0); opacity: 0; }
+  31.250% { -webkit-clip-path: inset(0 0 0 0); clip-path: inset(0 0 0 0); opacity: 1; }
+  43.750% { -webkit-clip-path: inset(0 0 0 0); clip-path: inset(0 0 0 0); opacity: 1; }
+  46.250% { -webkit-clip-path: inset(0 100% 0 0); clip-path: inset(0 100% 0 0); opacity: 0; }
+  100% { -webkit-clip-path: inset(0 100% 0 0); clip-path: inset(0 100% 0 0); opacity: 0; }
+}
+.l1 { animation: l1 16.0s linear infinite; }
+@keyframes l2 {
+  0% { -webkit-clip-path: inset(0 100% 0 0); clip-path: inset(0 100% 0 0); opacity: 0; }
+  50.000% { -webkit-clip-path: inset(0 100% 0 0); clip-path: inset(0 100% 0 0); opacity: 0; }
+  56.250% { -webkit-clip-path: inset(0 0 0 0); clip-path: inset(0 0 0 0); opacity: 1; }
+  68.750% { -webkit-clip-path: inset(0 0 0 0); clip-path: inset(0 0 0 0); opacity: 1; }
+  71.250% { -webkit-clip-path: inset(0 100% 0 0); clip-path: inset(0 100% 0 0); opacity: 0; }
+  100% { -webkit-clip-path: inset(0 100% 0 0); clip-path: inset(0 100% 0 0); opacity: 0; }
+}
+.l2 { animation: l2 16.0s linear infinite; }
+@keyframes l3 {
+  0% { -webkit-clip-path: inset(0 100% 0 0); clip-path: inset(0 100% 0 0); opacity: 0; }
+  75.000% { -webkit-clip-path: inset(0 100% 0 0); clip-path: inset(0 100% 0 0); opacity: 0; }
+  81.250% { -webkit-clip-path: inset(0 0 0 0); clip-path: inset(0 0 0 0); opacity: 1; }
+  93.750% { -webkit-clip-path: inset(0 0 0 0); clip-path: inset(0 0 0 0); opacity: 1; }
+  96.250% { -webkit-clip-path: inset(0 100% 0 0); clip-path: inset(0 100% 0 0); opacity: 0; }
+  100% { -webkit-clip-path: inset(0 100% 0 0); clip-path: inset(0 100% 0 0); opacity: 0; }
+}
+.l3 { animation: l3 16.0s linear infinite; }
+</style>
+<text class="t l0" x="360" y="34" text-anchor="middle">$ whoami<tspan class="cursor">▌</tspan></text>
+<text class="t l1" x="360" y="34" text-anchor="middle">&gt; Software Engineer<tspan class="cursor">▌</tspan></text>
+<text class="t l2" x="360" y="34" text-anchor="middle">&gt; ML Engineer<tspan class="cursor">▌</tspan></text>
+<text class="t l3" x="360" y="34" text-anchor="middle">&gt; building for East Africa from Nairobi, Kenya<tspan class="cursor">▌</tspan></text>
+</svg>

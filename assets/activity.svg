@@ -1,0 +1,57 @@
+<svg width="720" height="240" viewBox="0 0 720 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Contribution graph">
+<rect width="720" height="240" rx="12" fill="#0d1117"/>
+<text x="44" y="26" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Allan Kariuki&apos;s Contribution Graph</text>
+<defs>
+<linearGradient id="ag" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#00ff41" stop-opacity="0.25"/>
+<stop offset="1" stop-color="#00ff41" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="pc"><rect x="40" y="36" width="666" height="178"/></clipPath>
+</defs>
+<line x1="44" y1="210.0" x2="702" y2="210.0" stroke="#21262d" stroke-dasharray="3 3"/>
+<text x="36" y="214.0" text-anchor="end" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#8b949e">0</text>
+<line x1="44" y1="125.0" x2="702" y2="125.0" stroke="#21262d" stroke-dasharray="3 3"/>
+<text x="36" y="129.0" text-anchor="end" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#8b949e">40</text>
+<line x1="44" y1="40.0" x2="702" y2="40.0" stroke="#21262d" stroke-dasharray="3 3"/>
+<text x="36" y="44.0" text-anchor="end" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#8b949e">80</text>
+<path d="M 44.0 210.0 C 47.7 207.2, 58.6 193.0, 65.9 193.0 C 73.2 193.0, 80.6 208.2, 87.9 210.0 C 95.2 210.0, 102.5 203.6, 109.8 203.6 C 117.1 203.6, 124.4 210.0, 131.7 210.0 C 139.0 206.8, 146.4 188.4, 153.7 184.5 C 161.0 180.6, 168.3 187.3, 175.6 186.6 C 182.9 185.9, 190.2 176.4, 197.5 180.2 C 204.8 184.1, 212.2 205.0, 219.5 210.0 C 226.8 210.0, 234.1 210.0, 241.4 210.0 C 248.7 207.9, 256.0 199.7, 263.3 197.2 C 270.6 194.8, 278.0 194.1, 285.3 195.1 C 292.6 196.2, 299.9 207.9, 307.2 203.6 C 314.5 199.4, 321.8 173.2, 329.1 169.6 C 336.4 166.1, 343.8 177.4, 351.1 182.4 C 358.4 187.3, 365.7 210.0, 373.0 199.4 C 380.3 178.8, 387.6 60.2, 394.9 59.1 C 402.2 58.1, 409.6 168.6, 416.9 193.0 C 424.2 210.0, 431.5 203.6, 438.8 205.8 C 446.1 207.9, 453.4 208.6, 460.7 205.8 C 468.0 202.9, 475.4 189.5, 482.7 188.8 C 490.0 188.0, 497.3 198.7, 504.6 201.5 C 511.9 204.3, 519.2 206.1, 526.5 205.8 C 533.8 205.4, 541.2 204.0, 548.5 199.4 C 555.8 194.8, 563.1 176.4, 570.4 178.1 C 577.7 179.9, 585.0 205.0, 592.3 210.0 C 599.6 210.0, 607.0 210.0, 614.3 207.9 C 621.6 198.7, 628.9 156.5, 636.2 154.8 C 643.5 153.0, 650.8 189.5, 658.1 197.2 C 665.4 205.0, 672.8 203.3, 680.1 201.5 C 687.4 199.7, 698.3 189.1, 702.0 186.6 L 702 210 L 44 210 Z" fill="url(#ag)" clip-path="url(#pc)"/>
+<path d="M 44.0 210.0 C 47.7 207.2, 58.6 193.0, 65.9 193.0 C 73.2 193.0, 80.6 208.2, 87.9 210.0 C 95.2 210.0, 102.5 203.6, 109.8 203.6 C 117.1 203.6, 124.4 210.0, 131.7 210.0 C 139.0 206.8, 146.4 188.4, 153.7 184.5 C 161.0 180.6, 168.3 187.3, 175.6 186.6 C 182.9 185.9, 190.2 176.4, 197.5 180.2 C 204.8 184.1, 212.2 205.0, 219.5 210.0 C 226.8 210.0, 234.1 210.0, 241.4 210.0 C 248.7 207.9, 256.0 199.7, 263.3 197.2 C 270.6 194.8, 278.0 194.1, 285.3 195.1 C 292.6 196.2, 299.9 207.9, 307.2 203.6 C 314.5 199.4, 321.8 173.2, 329.1 169.6 C 336.4 166.1, 343.8 177.4, 351.1 182.4 C 358.4 187.3, 365.7 210.0, 373.0 199.4 C 380.3 178.8, 387.6 60.2, 394.9 59.1 C 402.2 58.1, 409.6 168.6, 416.9 193.0 C 424.2 210.0, 431.5 203.6, 438.8 205.8 C 446.1 207.9, 453.4 208.6, 460.7 205.8 C 468.0 202.9, 475.4 189.5, 482.7 188.8 C 490.0 188.0, 497.3 198.7, 504.6 201.5 C 511.9 204.3, 519.2 206.1, 526.5 205.8 C 533.8 205.4, 541.2 204.0, 548.5 199.4 C 555.8 194.8, 563.1 176.4, 570.4 178.1 C 577.7 179.9, 585.0 205.0, 592.3 210.0 C 599.6 210.0, 607.0 210.0, 614.3 207.9 C 621.6 198.7, 628.9 156.5, 636.2 154.8 C 643.5 153.0, 650.8 189.5, 658.1 197.2 C 665.4 205.0, 672.8 203.3, 680.1 201.5 C 687.4 199.7, 698.3 189.1, 702.0 186.6" fill="none" stroke="#00ff41" stroke-width="2" clip-path="url(#pc)"/>
+<circle cx="44.0" cy="210.0" r="2.5" fill="#ffffff"/>
+<circle cx="65.9" cy="193.0" r="2.5" fill="#ffffff"/>
+<circle cx="87.9" cy="210.0" r="2.5" fill="#ffffff"/>
+<circle cx="109.8" cy="203.6" r="2.5" fill="#ffffff"/>
+<circle cx="131.7" cy="210.0" r="2.5" fill="#ffffff"/>
+<circle cx="153.7" cy="184.5" r="2.5" fill="#ffffff"/>
+<circle cx="175.6" cy="186.6" r="2.5" fill="#ffffff"/>
+<circle cx="197.5" cy="180.2" r="2.5" fill="#ffffff"/>
+<circle cx="219.5" cy="210.0" r="2.5" fill="#ffffff"/>
+<circle cx="241.4" cy="210.0" r="2.5" fill="#ffffff"/>
+<circle cx="263.3" cy="197.2" r="2.5" fill="#ffffff"/>
+<circle cx="285.3" cy="195.1" r="2.5" fill="#ffffff"/>
+<circle cx="307.2" cy="203.6" r="2.5" fill="#ffffff"/>
+<circle cx="329.1" cy="169.6" r="2.5" fill="#ffffff"/>
+<circle cx="351.1" cy="182.4" r="2.5" fill="#ffffff"/>
+<circle cx="373.0" cy="199.4" r="2.5" fill="#ffffff"/>
+<circle cx="394.9" cy="59.1" r="2.5" fill="#ffffff"/>
+<circle cx="416.9" cy="193.0" r="2.5" fill="#ffffff"/>
+<circle cx="438.8" cy="205.8" r="2.5" fill="#ffffff"/>
+<circle cx="460.7" cy="205.8" r="2.5" fill="#ffffff"/>
+<circle cx="482.7" cy="188.8" r="2.5" fill="#ffffff"/>
+<circle cx="504.6" cy="201.5" r="2.5" fill="#ffffff"/>
+<circle cx="526.5" cy="205.8" r="2.5" fill="#ffffff"/>
+<circle cx="548.5" cy="199.4" r="2.5" fill="#ffffff"/>
+<circle cx="570.4" cy="178.1" r="2.5" fill="#ffffff"/>
+<circle cx="592.3" cy="210.0" r="2.5" fill="#ffffff"/>
+<circle cx="614.3" cy="207.9" r="2.5" fill="#ffffff"/>
+<circle cx="636.2" cy="154.8" r="2.5" fill="#ffffff"/>
+<circle cx="658.1" cy="197.2" r="2.5" fill="#ffffff"/>
+<circle cx="680.1" cy="201.5" r="2.5" fill="#ffffff"/>
+<circle cx="702.0" cy="186.6" r="2.5" fill="#ffffff"/>
+<text x="44.0" y="230" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#8b949e">27</text>
+<text x="153.7" y="230" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#8b949e">1</text>
+<text x="263.3" y="230" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#8b949e">6</text>
+<text x="373.0" y="230" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#8b949e">11</text>
+<text x="482.7" y="230" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#8b949e">16</text>
+<text x="592.3" y="230" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#8b949e">21</text>
+<text x="702.0" y="230" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#8b949e">26</text>
+</svg>
