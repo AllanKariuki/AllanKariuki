@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Theme switched from green to blue (#58a6ff).
 - Stats card redesigned with icons, 8 metrics and an activity grade ring.
 - Streak card restored to the three-column layout with dividers and a fire icon.
-- Stats and streak cards sized to 49% width so they share one row on GitHub.
+- Stats and top languages cards (both 495x195, bordered) share one row at 49% width; the streak card has its own row below.
 - Activity graph redesigned as a year view with gradient line, last-year comparison and today marker.
 - Activity graph title centered; added axis titles, y-axis ticks and a centered legend.
 

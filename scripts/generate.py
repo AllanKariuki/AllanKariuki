@@ -589,14 +589,15 @@ def render_stats(d):
 
 
 def render_langs(d):
-    width, height = 480, 220
+    width, height = 495, 195
     langs = list(d["languages"])[:9]  # top 8 + optional "Other"
     total = sum(lang["size"] for lang in langs) or 1
     parts = [
         f'<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" '
         'xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Top languages">',
-        _bg(width, height),
-        f'<text x="24" y="38" font-family="{FONT}" font-size="16" font-weight="700" '
+        f'<rect width="{width}" height="{height}" rx="12" fill="{BG}" '
+        'stroke="#30363d" stroke-width="1"/>',
+        f'<text x="24" y="38" font-family="{FONT}" font-size="18" font-weight="700" '
         f'fill="{ACCENT}">Top Languages</text>',
     ]
     if not langs:
@@ -605,7 +606,7 @@ def render_langs(d):
             f'fill="{MUTED}">No languages yet</text>'
         )
     else:
-        bar_x, bar_y, bar_w, bar_h = 24, 60, width - 48, 12
+        bar_x, bar_y, bar_w, bar_h = 24, 54, width - 48, 10
         x = float(bar_x)
         for lang in langs:
             seg_w = (lang["size"] / total) * bar_w
@@ -614,10 +615,10 @@ def render_langs(d):
                 f'fill="{esc(lang["color"])}"/>'
             )
             x += seg_w
-        col_x = [24, 250]
+        col_x = [24, 265]
         for idx, lang in enumerate(langs):
             cx = col_x[idx % 2]
-            cy = 108 + (idx // 2) * 24
+            cy = 90 + (idx // 2) * 22
             pct = lang["size"] / total * 100.0
             parts.append(
                 f'<rect x="{cx}" y="{cy - 9}" width="10" height="10" rx="2" '

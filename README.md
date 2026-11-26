@@ -170,11 +170,11 @@ about:    Simulates playing drums by tracking
 <div align="center">
 
 <img width="49%" src="./assets/stats.svg" alt="stats" />
-<img width="49%" src="./assets/streak.svg" alt="streak" />
+<img width="49%" src="./assets/top-langs.svg" alt="top languages" />
 
 <br/>
 
-<img src="./assets/top-langs.svg" alt="top languages" />
+<img src="./assets/streak.svg" alt="streak" />
 
 <br/><br/>
 
