@@ -1,7 +1,7 @@
 <svg width="720" height="50" viewBox="0 0 720 50" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Terminal typing animation">
 <rect width="720" height="50" rx="8" fill="#0d1117"/>
 <style>
-.t { font-family: 'Fira Code', 'Cascadia Code', Consolas, 'Courier New', monospace; font-size: 20px; fill: #00ff41; }
+.t { font-family: 'Fira Code', 'Cascadia Code', Consolas, 'Courier New', monospace; font-size: 20px; fill: #58a6ff; }
 @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
 .cursor { animation: blink 0.8s steps(1) infinite; }
 @keyframes l0 {

@@ -1,57 +1,58 @@
-<svg width="720" height="240" viewBox="0 0 720 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Contribution graph">
-<rect width="720" height="240" rx="12" fill="#0d1117"/>
-<text x="44" y="26" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Allan Kariuki&apos;s Contribution Graph</text>
+<svg width="830" height="260" viewBox="0 0 830 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Contribution activity">
+<rect width="830" height="260" rx="12" fill="#0d1117"/>
+<text x="24" y="30" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#58a6ff">Contribution Activity · 2026</text>
+<line x1="590" y1="22" x2="612" y2="22" stroke="#58a6ff" stroke-width="2.5"/>
+<text x="618" y="26" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#8b949e">This year</text>
+<line x1="700" y1="22" x2="722" y2="22" stroke="#8b949e" stroke-width="1.5" stroke-dasharray="1.5 4" stroke-linecap="round"/>
+<text x="728" y="26" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#8b949e">Last year</text>
 <defs>
-<linearGradient id="ag" x1="0" y1="0" x2="0" y2="1">
-<stop offset="0" stop-color="#00ff41" stop-opacity="0.25"/>
-<stop offset="1" stop-color="#00ff41" stop-opacity="0"/>
+<linearGradient id="linegrad" gradientUnits="userSpaceOnUse" x1="48" y1="0" x2="810" y2="0">
+<stop offset="0" stop-color="#39d0d8"/>
+<stop offset="0.33" stop-color="#58a6ff"/>
+<stop offset="0.66" stop-color="#a371f7"/>
+<stop offset="1" stop-color="#bc8cff"/>
 </linearGradient>
-<clipPath id="pc"><rect x="40" y="36" width="666" height="178"/></clipPath>
+<linearGradient id="fademask" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#ffffff"/>
+<stop offset="1" stop-color="#000000"/>
+</linearGradient>
+<mask id="areamask"><rect x="48" y="56" width="762" height="164" fill="url(#fademask)"/></mask>
+<clipPath id="pc"><rect x="48" y="56" width="762" height="164"/></clipPath>
 </defs>
-<line x1="44" y1="210.0" x2="702" y2="210.0" stroke="#21262d" stroke-dasharray="3 3"/>
-<text x="36" y="214.0" text-anchor="end" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#8b949e">0</text>
-<line x1="44" y1="125.0" x2="702" y2="125.0" stroke="#21262d" stroke-dasharray="3 3"/>
-<text x="36" y="129.0" text-anchor="end" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#8b949e">40</text>
-<line x1="44" y1="40.0" x2="702" y2="40.0" stroke="#21262d" stroke-dasharray="3 3"/>
-<text x="36" y="44.0" text-anchor="end" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#8b949e">80</text>
-<path d="M 44.0 210.0 C 47.7 207.2, 58.6 193.0, 65.9 193.0 C 73.2 193.0, 80.6 208.2, 87.9 210.0 C 95.2 210.0, 102.5 203.6, 109.8 203.6 C 117.1 203.6, 124.4 210.0, 131.7 210.0 C 139.0 206.8, 146.4 188.4, 153.7 184.5 C 161.0 180.6, 168.3 187.3, 175.6 186.6 C 182.9 185.9, 190.2 176.4, 197.5 180.2 C 204.8 184.1, 212.2 205.0, 219.5 210.0 C 226.8 210.0, 234.1 210.0, 241.4 210.0 C 248.7 207.9, 256.0 199.7, 263.3 197.2 C 270.6 194.8, 278.0 194.1, 285.3 195.1 C 292.6 196.2, 299.9 207.9, 307.2 203.6 C 314.5 199.4, 321.8 173.2, 329.1 169.6 C 336.4 166.1, 343.8 177.4, 351.1 182.4 C 358.4 187.3, 365.7 210.0, 373.0 199.4 C 380.3 178.8, 387.6 60.2, 394.9 59.1 C 402.2 58.1, 409.6 168.6, 416.9 193.0 C 424.2 210.0, 431.5 203.6, 438.8 205.8 C 446.1 207.9, 453.4 208.6, 460.7 205.8 C 468.0 202.9, 475.4 189.5, 482.7 188.8 C 490.0 188.0, 497.3 198.7, 504.6 201.5 C 511.9 204.3, 519.2 206.1, 526.5 205.8 C 533.8 205.4, 541.2 204.0, 548.5 199.4 C 555.8 194.8, 563.1 176.4, 570.4 178.1 C 577.7 179.9, 585.0 205.0, 592.3 210.0 C 599.6 210.0, 607.0 210.0, 614.3 207.9 C 621.6 198.7, 628.9 156.5, 636.2 154.8 C 643.5 153.0, 650.8 189.5, 658.1 197.2 C 665.4 205.0, 672.8 203.3, 680.1 201.5 C 687.4 199.7, 698.3 189.1, 702.0 186.6 L 702 210 L 44 210 Z" fill="url(#ag)" clip-path="url(#pc)"/>
-<path d="M 44.0 210.0 C 47.7 207.2, 58.6 193.0, 65.9 193.0 C 73.2 193.0, 80.6 208.2, 87.9 210.0 C 95.2 210.0, 102.5 203.6, 109.8 203.6 C 117.1 203.6, 124.4 210.0, 131.7 210.0 C 139.0 206.8, 146.4 188.4, 153.7 184.5 C 161.0 180.6, 168.3 187.3, 175.6 186.6 C 182.9 185.9, 190.2 176.4, 197.5 180.2 C 204.8 184.1, 212.2 205.0, 219.5 210.0 C 226.8 210.0, 234.1 210.0, 241.4 210.0 C 248.7 207.9, 256.0 199.7, 263.3 197.2 C 270.6 194.8, 278.0 194.1, 285.3 195.1 C 292.6 196.2, 299.9 207.9, 307.2 203.6 C 314.5 199.4, 321.8 173.2, 329.1 169.6 C 336.4 166.1, 343.8 177.4, 351.1 182.4 C 358.4 187.3, 365.7 210.0, 373.0 199.4 C 380.3 178.8, 387.6 60.2, 394.9 59.1 C 402.2 58.1, 409.6 168.6, 416.9 193.0 C 424.2 210.0, 431.5 203.6, 438.8 205.8 C 446.1 207.9, 453.4 208.6, 460.7 205.8 C 468.0 202.9, 475.4 189.5, 482.7 188.8 C 490.0 188.0, 497.3 198.7, 504.6 201.5 C 511.9 204.3, 519.2 206.1, 526.5 205.8 C 533.8 205.4, 541.2 204.0, 548.5 199.4 C 555.8 194.8, 563.1 176.4, 570.4 178.1 C 577.7 179.9, 585.0 205.0, 592.3 210.0 C 599.6 210.0, 607.0 210.0, 614.3 207.9 C 621.6 198.7, 628.9 156.5, 636.2 154.8 C 643.5 153.0, 650.8 189.5, 658.1 197.2 C 665.4 205.0, 672.8 203.3, 680.1 201.5 C 687.4 199.7, 698.3 189.1, 702.0 186.6" fill="none" stroke="#00ff41" stroke-width="2" clip-path="url(#pc)"/>
-<circle cx="44.0" cy="210.0" r="2.5" fill="#ffffff"/>
-<circle cx="65.9" cy="193.0" r="2.5" fill="#ffffff"/>
-<circle cx="87.9" cy="210.0" r="2.5" fill="#ffffff"/>
-<circle cx="109.8" cy="203.6" r="2.5" fill="#ffffff"/>
-<circle cx="131.7" cy="210.0" r="2.5" fill="#ffffff"/>
-<circle cx="153.7" cy="184.5" r="2.5" fill="#ffffff"/>
-<circle cx="175.6" cy="186.6" r="2.5" fill="#ffffff"/>
-<circle cx="197.5" cy="180.2" r="2.5" fill="#ffffff"/>
-<circle cx="219.5" cy="210.0" r="2.5" fill="#ffffff"/>
-<circle cx="241.4" cy="210.0" r="2.5" fill="#ffffff"/>
-<circle cx="263.3" cy="197.2" r="2.5" fill="#ffffff"/>
-<circle cx="285.3" cy="195.1" r="2.5" fill="#ffffff"/>
-<circle cx="307.2" cy="203.6" r="2.5" fill="#ffffff"/>
-<circle cx="329.1" cy="169.6" r="2.5" fill="#ffffff"/>
-<circle cx="351.1" cy="182.4" r="2.5" fill="#ffffff"/>
-<circle cx="373.0" cy="199.4" r="2.5" fill="#ffffff"/>
-<circle cx="394.9" cy="59.1" r="2.5" fill="#ffffff"/>
-<circle cx="416.9" cy="193.0" r="2.5" fill="#ffffff"/>
-<circle cx="438.8" cy="205.8" r="2.5" fill="#ffffff"/>
-<circle cx="460.7" cy="205.8" r="2.5" fill="#ffffff"/>
-<circle cx="482.7" cy="188.8" r="2.5" fill="#ffffff"/>
-<circle cx="504.6" cy="201.5" r="2.5" fill="#ffffff"/>
-<circle cx="526.5" cy="205.8" r="2.5" fill="#ffffff"/>
-<circle cx="548.5" cy="199.4" r="2.5" fill="#ffffff"/>
-<circle cx="570.4" cy="178.1" r="2.5" fill="#ffffff"/>
-<circle cx="592.3" cy="210.0" r="2.5" fill="#ffffff"/>
-<circle cx="614.3" cy="207.9" r="2.5" fill="#ffffff"/>
-<circle cx="636.2" cy="154.8" r="2.5" fill="#ffffff"/>
-<circle cx="658.1" cy="197.2" r="2.5" fill="#ffffff"/>
-<circle cx="680.1" cy="201.5" r="2.5" fill="#ffffff"/>
-<circle cx="702.0" cy="186.6" r="2.5" fill="#ffffff"/>
-<text x="44.0" y="230" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#8b949e">27</text>
-<text x="153.7" y="230" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#8b949e">1</text>
-<text x="263.3" y="230" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#8b949e">6</text>
-<text x="373.0" y="230" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#8b949e">11</text>
-<text x="482.7" y="230" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#8b949e">16</text>
-<text x="592.3" y="230" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#8b949e">21</text>
-<text x="702.0" y="230" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#8b949e">26</text>
+<line x1="48.0" y1="56" x2="48.0" y2="220" stroke="#21262d" stroke-width="1"/>
+<text x="80.4" y="246" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#8b949e">Jan</text>
+<line x1="112.7" y1="56" x2="112.7" y2="220" stroke="#21262d" stroke-width="1"/>
+<text x="141.9" y="246" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#8b949e">Feb</text>
+<line x1="171.2" y1="56" x2="171.2" y2="220" stroke="#21262d" stroke-width="1"/>
+<text x="203.5" y="246" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#8b949e">Mar</text>
+<line x1="235.9" y1="56" x2="235.9" y2="220" stroke="#21262d" stroke-width="1"/>
+<text x="267.2" y="246" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#8b949e">Apr</text>
+<line x1="298.5" y1="56" x2="298.5" y2="220" stroke="#21262d" stroke-width="1"/>
+<text x="330.9" y="246" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#8b949e">May</text>
+<line x1="363.2" y1="56" x2="363.2" y2="220" stroke="#21262d" stroke-width="1"/>
+<text x="394.6" y="246" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#8b949e">Jun</text>
+<line x1="425.9" y1="56" x2="425.9" y2="220" stroke="#21262d" stroke-width="1"/>
+<text x="458.2" y="246" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#8b949e">Jul</text>
+<line x1="490.6" y1="56" x2="490.6" y2="220" stroke="#21262d" stroke-width="1"/>
+<text x="522.9" y="246" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#8b949e">Aug</text>
+<line x1="555.3" y1="56" x2="555.3" y2="220" stroke="#21262d" stroke-width="1"/>
+<text x="586.6" y="246" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#8b949e">Sep</text>
+<line x1="617.9" y1="56" x2="617.9" y2="220" stroke="#21262d" stroke-width="1"/>
+<text x="650.3" y="246" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#8b949e">Oct</text>
+<line x1="682.7" y1="56" x2="682.7" y2="220" stroke="#21262d" stroke-width="1"/>
+<text x="714.0" y="246" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#8b949e">Nov</text>
+<line x1="745.3" y1="56" x2="745.3" y2="220" stroke="#21262d" stroke-width="1"/>
+<text x="777.6" y="246" text-anchor="middle" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#8b949e">Dec</text>
+<line x1="48" y1="220.0" x2="810" y2="220.0" stroke="#21262d" stroke-width="1"/>
+<line x1="48" y1="165.3" x2="810" y2="165.3" stroke="#21262d" stroke-width="1"/>
+<line x1="48" y1="110.7" x2="810" y2="110.7" stroke="#21262d" stroke-width="1"/>
+<line x1="48" y1="56.0" x2="810" y2="56.0" stroke="#21262d" stroke-width="1"/>
+<text x="48" y="48" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#8b949e">100</text>
+<path d="M 55.3 220.0 C 57.7 220.0, 65.0 220.0, 69.9 220.0 C 74.8 220.0, 79.7 220.0, 84.5 220.0 C 89.4 220.0, 94.3 220.0, 99.1 220.0 C 104.0 219.7, 108.9 218.6, 113.8 218.4 C 118.6 218.1, 123.5 218.1, 128.4 218.4 C 133.2 218.6, 138.1 219.7, 143.0 220.0 C 147.9 220.0, 152.7 220.0, 157.6 220.0 C 162.5 219.5, 167.3 216.7, 172.2 216.7 C 177.1 216.7, 182.0 219.5, 186.8 220.0 C 191.7 220.0, 196.6 220.0, 201.4 220.0 C 206.3 219.7, 211.2 218.4, 216.1 218.4 C 220.9 218.4, 225.8 219.7, 230.7 220.0 C 235.5 220.0, 240.4 220.0, 245.3 220.0 C 250.2 220.0, 255.0 220.0, 259.9 220.0 C 264.8 220.0, 269.6 220.0, 274.5 220.0 C 279.4 220.0, 284.3 220.0, 289.1 220.0 C 294.0 220.0, 298.9 220.0, 303.7 220.0 C 308.6 219.2, 313.5 217.3, 318.4 215.1 C 323.2 212.9, 328.1 209.3, 333.0 206.9 C 337.8 204.4, 342.7 198.1, 347.6 200.3 C 352.5 202.5, 357.3 216.7, 362.2 220.0 C 367.1 220.0, 371.9 220.0, 376.8 220.0 C 381.7 220.0, 386.6 220.0, 391.4 220.0 C 396.3 220.0, 401.2 220.0, 406.0 220.0 C 410.9 220.0, 415.8 220.0, 420.6 220.0 C 425.5 219.7, 430.4 218.4, 435.3 218.4 C 440.1 218.4, 445.0 220.0, 449.9 220.0 C 454.7 219.2, 459.6 213.4, 464.5 213.4 C 469.4 213.4, 474.2 218.9, 479.1 220.0 C 484.0 220.0, 488.8 220.0, 493.7 220.0 C 498.6 220.0, 503.5 220.0, 508.3 220.0 C 513.2 219.7, 518.1 218.4, 522.9 218.4 C 527.8 218.4, 532.7 220.0, 537.6 220.0 C 542.4 220.0, 547.3 218.4, 552.2 218.4 C 557.0 218.4, 561.9 219.7, 566.8 220.0 C 571.7 220.0, 576.5 220.0, 581.4 220.0 C 586.3 219.5, 591.1 218.4, 596.0 216.7 C 600.9 215.1, 605.8 209.6, 610.6 210.2 C 615.5 210.7, 620.4 218.4, 625.2 220.0 C 630.1 220.0, 635.0 220.0, 639.9 220.0 C 644.7 218.4, 649.6 210.2, 654.5 210.2 C 659.3 210.2, 664.2 218.4, 669.1 220.0 C 674.0 220.0, 678.8 220.0, 683.7 220.0 C 688.6 220.0, 693.4 220.0, 698.3 220.0 C 703.2 220.0, 708.1 220.0, 712.9 220.0 C 717.8 220.0, 722.7 220.0, 727.5 220.0 C 732.4 220.0, 737.3 220.0, 742.2 220.0 C 747.0 219.7, 751.9 218.4, 756.8 218.4 C 761.6 218.4, 766.5 219.7, 771.4 220.0 C 776.2 220.0, 781.1 220.0, 786.0 220.0 C 790.9 220.0, 796.8 220.0, 800.6 220.0 C 804.4 220.0, 807.6 220.0, 809.0 220.0" fill="none" stroke="#8b949e" stroke-width="1.5" stroke-dasharray="1.5 4" stroke-linecap="round" clip-path="url(#pc)"/>
+<path d="M 742.2 198.7 C 744.6 202.0, 751.9 214.8, 756.8 218.4 C 761.6 220.0, 766.5 219.7, 771.4 220.0 C 776.2 220.0, 781.1 220.0, 786.0 220.0 C 790.9 220.0, 796.8 220.0, 800.6 220.0 C 804.4 220.0, 807.6 220.0, 809.0 220.0 L 809.0 220 L 742.2 220 Z" fill="#58a6ff" opacity="0.05" clip-path="url(#pc)"/>
+<path d="M 742.2 198.7 C 744.6 202.0, 751.9 214.8, 756.8 218.4 C 761.6 220.0, 766.5 219.7, 771.4 220.0 C 776.2 220.0, 781.1 220.0, 786.0 220.0 C 790.9 220.0, 796.8 220.0, 800.6 220.0 C 804.4 220.0, 807.6 220.0, 809.0 220.0" fill="none" stroke="#58a6ff" stroke-width="2.5" opacity="0.25" clip-path="url(#pc)"/>
+<path d="M 55.3 220.0 C 57.7 219.7, 65.0 218.9, 69.9 218.4 C 74.8 217.8, 79.7 218.1, 84.5 216.7 C 89.4 215.4, 94.3 209.6, 99.1 210.2 C 104.0 210.7, 108.9 220.0, 113.8 220.0 C 118.6 218.1, 123.5 212.1, 128.4 198.7 C 133.2 185.3, 138.1 139.4, 143.0 139.6 C 147.9 139.9, 152.7 187.7, 157.6 200.3 C 162.5 212.9, 167.3 212.9, 172.2 215.1 C 177.1 217.3, 182.0 220.0, 186.8 213.4 C 191.7 205.8, 196.6 168.1, 201.4 169.2 C 206.3 170.3, 211.2 211.5, 216.1 220.0 C 220.9 220.0, 225.8 220.0, 230.7 220.0 C 235.5 220.0, 240.4 220.0, 245.3 220.0 C 250.2 219.2, 255.0 216.4, 259.9 215.1 C 264.8 213.7, 269.6 211.0, 274.5 211.8 C 279.4 212.6, 284.3 220.0, 289.1 220.0 C 294.0 218.1, 298.9 202.5, 303.7 200.3 C 308.6 198.1, 313.5 208.5, 318.4 206.9 C 323.2 205.2, 328.1 188.3, 333.0 190.5 C 337.8 192.7, 342.7 215.1, 347.6 220.0 C 352.5 220.0, 357.3 220.0, 362.2 220.0 C 367.1 211.8, 371.9 175.2, 376.8 170.8 C 381.7 166.4, 386.6 189.7, 391.4 193.8 C 396.3 197.9, 401.2 192.7, 406.0 195.4 C 410.9 198.1, 415.8 209.1, 420.6 210.2 C 425.5 211.3, 430.4 203.3, 435.3 202.0 C 440.1 200.6, 445.0 208.5, 449.9 202.0 C 454.7 195.4, 459.6 164.2, 464.5 162.6 C 469.4 161.0, 474.2 192.1, 479.1 192.1 C 484.0 192.1, 488.8 158.2, 493.7 162.6 C 498.6 167.0, 503.5 220.0, 508.3 218.4 C 513.2 205.2, 518.1 83.6, 522.9 83.9 C 527.8 84.2, 532.7 197.3, 537.6 220.0 C 542.4 220.0, 547.3 220.0, 552.2 220.0 C 557.0 213.4, 561.9 200.6, 566.8 180.6 C 571.7 160.7, 576.5 106.0, 581.4 100.3 C 586.3 94.5, 591.1 135.5, 596.0 146.2 C 600.9 156.9, 605.8 151.9, 610.6 164.2 C 615.5 176.5, 620.4 210.7, 625.2 220.0 C 630.1 220.0, 635.0 220.0, 639.9 220.0 C 644.7 219.5, 649.6 219.5, 654.5 216.7 C 659.3 214.0, 664.2 214.0, 669.1 203.6 C 674.0 193.2, 678.8 166.2, 683.7 154.4 C 688.6 142.6, 693.4 149.2, 698.3 133.1 C 703.2 117.0, 708.1 58.7, 712.9 57.6 C 717.8 56.5, 722.7 103.0, 727.5 126.5 C 732.4 150.0, 739.7 186.7, 742.2 198.7 L 742.2 220 L 55.3 220 Z" fill="url(#linegrad)" opacity="0.22" mask="url(#areamask)" clip-path="url(#pc)"/>
+<path d="M 55.3 220.0 C 57.7 219.7, 65.0 218.9, 69.9 218.4 C 74.8 217.8, 79.7 218.1, 84.5 216.7 C 89.4 215.4, 94.3 209.6, 99.1 210.2 C 104.0 210.7, 108.9 220.0, 113.8 220.0 C 118.6 218.1, 123.5 212.1, 128.4 198.7 C 133.2 185.3, 138.1 139.4, 143.0 139.6 C 147.9 139.9, 152.7 187.7, 157.6 200.3 C 162.5 212.9, 167.3 212.9, 172.2 215.1 C 177.1 217.3, 182.0 220.0, 186.8 213.4 C 191.7 205.8, 196.6 168.1, 201.4 169.2 C 206.3 170.3, 211.2 211.5, 216.1 220.0 C 220.9 220.0, 225.8 220.0, 230.7 220.0 C 235.5 220.0, 240.4 220.0, 245.3 220.0 C 250.2 219.2, 255.0 216.4, 259.9 215.1 C 264.8 213.7, 269.6 211.0, 274.5 211.8 C 279.4 212.6, 284.3 220.0, 289.1 220.0 C 294.0 218.1, 298.9 202.5, 303.7 200.3 C 308.6 198.1, 313.5 208.5, 318.4 206.9 C 323.2 205.2, 328.1 188.3, 333.0 190.5 C 337.8 192.7, 342.7 215.1, 347.6 220.0 C 352.5 220.0, 357.3 220.0, 362.2 220.0 C 367.1 211.8, 371.9 175.2, 376.8 170.8 C 381.7 166.4, 386.6 189.7, 391.4 193.8 C 396.3 197.9, 401.2 192.7, 406.0 195.4 C 410.9 198.1, 415.8 209.1, 420.6 210.2 C 425.5 211.3, 430.4 203.3, 435.3 202.0 C 440.1 200.6, 445.0 208.5, 449.9 202.0 C 454.7 195.4, 459.6 164.2, 464.5 162.6 C 469.4 161.0, 474.2 192.1, 479.1 192.1 C 484.0 192.1, 488.8 158.2, 493.7 162.6 C 498.6 167.0, 503.5 220.0, 508.3 218.4 C 513.2 205.2, 518.1 83.6, 522.9 83.9 C 527.8 84.2, 532.7 197.3, 537.6 220.0 C 542.4 220.0, 547.3 220.0, 552.2 220.0 C 557.0 213.4, 561.9 200.6, 566.8 180.6 C 571.7 160.7, 576.5 106.0, 581.4 100.3 C 586.3 94.5, 591.1 135.5, 596.0 146.2 C 600.9 156.9, 605.8 151.9, 610.6 164.2 C 615.5 176.5, 620.4 210.7, 625.2 220.0 C 630.1 220.0, 635.0 220.0, 639.9 220.0 C 644.7 219.5, 649.6 219.5, 654.5 216.7 C 659.3 214.0, 664.2 214.0, 669.1 203.6 C 674.0 193.2, 678.8 166.2, 683.7 154.4 C 688.6 142.6, 693.4 149.2, 698.3 133.1 C 703.2 117.0, 708.1 58.7, 712.9 57.6 C 717.8 56.5, 722.7 103.0, 727.5 126.5 C 732.4 150.0, 739.7 186.7, 742.2 198.7" fill="none" stroke="url(#linegrad)" stroke-width="2.5" clip-path="url(#pc)"/>
+<line x1="742.2" y1="56" x2="742.2" y2="220" stroke="#8b949e" stroke-dasharray="2 4"/>
+<circle cx="742.2" cy="198.7" r="5" fill="#0d1117" stroke="#58a6ff" stroke-width="2"/>
 </svg>

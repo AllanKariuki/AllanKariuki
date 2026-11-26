@@ -18,6 +18,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated the about object, tech stack and pinned projects to reflect current work, adding Go, TypeScript, Kotlin, Dart, Rust, Solidity, FastAPI, PyTorch, Hugging Face, Flutter, Jetpack Compose, Next.js, Foundry, Redis, Keycloak and Kubernetes.
 - LinkedIn badge now uses an inline base64 SVG logo (simple-icons removed the LinkedIn icon).
 - Updated the footer line to "82 public repositories · pinned 5 above".
+- Theme switched from green to blue (#58a6ff).
+- Stats card redesigned with icons, 8 metrics and an activity grade ring.
+- Streak card restored to the three-column layout with dividers and a fire icon.
+- Stats and streak now share one row.
+- Activity graph redesigned as a year view with gradient line, last-year comparison and today marker.
 
 ### Fixed
 - Replaced the broken "Could not fetch total commits" stats card and broken trophy image with in-repo equivalents.

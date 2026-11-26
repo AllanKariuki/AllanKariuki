@@ -1,6 +1,6 @@
 <svg width="480" height="220" viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Top languages">
 <rect width="480" height="220" rx="12" fill="#0d1117"/>
-<text x="24" y="38" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="700" fill="#00ff41">Top Languages</text>
+<text x="24" y="38" font-family="'Segoe UI', Ubuntu, -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="700" fill="#58a6ff">Top Languages</text>
 <rect x="24.0" y="60" width="120.9" height="12" fill="#DA5B0B"/>
 <rect x="144.9" y="60" width="71.0" height="12" fill="#3178c6"/>
 <rect x="215.9" y="60" width="50.8" height="12" fill="#AA6746"/>
