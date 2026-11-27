@@ -8,6 +8,7 @@
   <img src="https://komarev.com/ghpvc/?username=AllanKariuki&label=PROFILE+VIEWS&color=58a6ff&style=for-the-badge" alt="profile views"/>
   <img src="https://img.shields.io/github/followers/AllanKariuki?logo=github&style=for-the-badge&color=58a6ff&labelColor=0d1117&label=FOLLOWERS" alt="followers"/>
   <img src="https://img.shields.io/badge/STATUS-ONLINE-58a6ff?style=for-the-badge&labelColor=0d1117" alt="status"/>
+  <a href="https://allankariuki.github.io"><img src="https://img.shields.io/badge/PORTFOLIO-allankariuki.github.io-58a6ff?style=for-the-badge&labelColor=0d1117" alt="portfolio"/></a>
 </p>
 
 </div>
@@ -214,6 +215,9 @@ about:    Simulates playing drums by tracking
 </a>
 <a href="mailto:allankariuki96@gmail.com">
   <img src="https://img.shields.io/badge/Email-allankariuki96@gmail.com-0d1117?style=for-the-badge&logo=gmail&logoColor=58a6ff&labelColor=0d1117" />
+</a>
+<a href="https://allankariuki.github.io">
+  <img src="https://img.shields.io/badge/Portfolio-allankariuki.github.io-0d1117?style=for-the-badge&logo=googlechrome&logoColor=58a6ff&labelColor=0d1117" />
 </a>
 <a href="https://github.com/AllanKariuki">
   <img src="https://img.shields.io/badge/GitHub-@AllanKariuki-0d1117?style=for-the-badge&logo=github&logoColor=58a6ff&labelColor=0d1117" />
